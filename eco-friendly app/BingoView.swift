@@ -3,25 +3,18 @@ import Forever
 
 struct BingoView: View {
     @Forever("challenge") private var listOfChallenges: [Challenge] = []
-    
     @State private var tappedIndex = 9
     @AppStorage("challengesCompleted") var challengesCompleted = 0
     @AppStorage("totalchallengesCompleted") var totalchallengesCompleted = 0
     @StateObject private var timerViewModel = TimerViewModel()
     @Forever("countdown") var countdown: Date = .now
-    @Forever("lastDate") var lastUseDate: Date = .now
-    @State private var isSheetPresented = false
-    @State var daysLeft = 0
-    
-    
-    private var checkedDate: Int {
-        Calendar.current.dateComponents([.day], from: countdown, to: lastUseDate).day ?? 0
-    }
-    
-    var daysLeftCalculated: Int {
-        max(0, 14 - abs(checkedDate))
-    }
-    
+    @Forever("lastDate") var lastUseDate: Date = Calendar.current.date(byAdding: .day, value: 14, to: .now) ?? Date()
+    @State private var secondsLeft = 0
+    @State private var minutesLeft = 0
+    @State private var hoursLeft = 0
+    @State private var daysLeft = 0
+    @State private var currentChallenge: Challenge?
+
     var body: some View {
         VStack {
             LazyVGrid(columns: Array(repeating: .init(.flexible()), count: 3), spacing: 10) {
@@ -39,11 +32,8 @@ struct BingoView: View {
                         }
                 }
             }
-            if let selectedChallengeIndex = listOfChallenges.firstIndex(where: { $0.challengeIndex == tappedIndex }) {
-                let selectedChallenge = listOfChallenges[selectedChallengeIndex]
-                
-                    .padding()
-                
+
+            VStack {
                 if let selectedChallengeIndex = listOfChallenges.firstIndex(where: { $0.challengeIndex == tappedIndex }) {
                     let selectedChallenge = listOfChallenges[selectedChallengeIndex]
                     
@@ -62,6 +52,7 @@ struct BingoView: View {
                             totalchallengesCompleted = Int(totalchallengesCompleted) + 1
                         } label: {
                             Text("Done!")
+                                .padding()
                         }
                         .disabled(selectedChallenge.buttonClicked)
                         
@@ -72,81 +63,86 @@ struct BingoView: View {
                         Text("\(Int(selectedChallenge.progress * 100))%")
                             .padding()
                         
-                        Text("You have \(daysLeft) day(s) left")
+                        Text("You have \(daysLeft) day(s), \(hoursLeft) hours, \(minutesLeft) minute(s) and \(secondsLeft) second(s) left")
                         Button("Return to start") {
                             tappedIndex = 9
                         }
                     }
                 } else {
                     VStack {
-                        Text("Please select one of the nine options given.")
-                        Text("You have \(daysLeft) day(s) left")
-                        
-                        
-                        
-                        if challengesCompleted == listOfChallenges.count {
-                            Button {
-                                resetChallenges()
-                            } label: {
-                                Text("Reset challenges")
-                                    .padding()
-                                    .background(Color.blue)
-                                    .foregroundColor(.white)
-                                    .cornerRadius(8)
+                        if let currentChallenge = currentChallenge {
+                            Text("Random Challenge:")
+                                .bold()
+                                .font(.title3)
+                            Text(currentChallenge.challengeTitle)
+                                .font(.subheadline)
+                                .multilineTextAlignment(.center)
+                            Text(currentChallenge.challengeDescription)
+                                .font(.subheadline)
+                                .multilineTextAlignment(.center)
+                        } else {
+                            Text("Please select one of the nine options given.")
+                            Text("You have \(daysLeft) day(s), \(hoursLeft) hours, \(minutesLeft) minute(s) and \(secondsLeft) second(s) left")
+                            
+                            if challengesCompleted == listOfChallenges.count {
+                                Button {
+                                    resetChallenges()
+                                } label: {
+                                    Text("Reset challenges")
+                                        .padding()
+                                        .background(Color.blue)
+                                        .foregroundColor(.white)
+                                        .cornerRadius(8)
+                                }
                             }
                         }
                     }
                 }
             }
-                .onAppear {
-                    lastUseDate = Date()
-                    let timeSinceStart = Date.now.timeIntervalSince(countdown)
-                    daysLeft = daysLeftCalculated
-                    if daysLeftCalculated == 0 {
-                        let numberOfWeeks = Int(timeSinceStart / timerViewModel.twoWeeksInSeconds)
-                        let twoWeekPair = numberOfWeeks/2
-                        let challenges = challengesForTwoWeek(number: twoWeekPair)
-                        
-                        if challenges.first?.challengeTitle != listOfChallenges.first?.challengeTitle {
-                            listOfChallenges = challenges
-                        }
-                        countdown = Calendar.current.date(byAdding: .day, value: 14, to: countdown) ?? Date()
-                        
-                    }
-                    lastUseDate = Date()
-                    let timeSinceStart = Date.now.timeIntervalSince(countdown)
-                    
-                }
         }
-        
-        func handleChallengeCompletion(selectedChallengeIndex: Int) {
-            if !listOfChallenges[selectedChallengeIndex].completed {
-                challengesCompleted += 1
+        .onAppear {
+            print(lastUseDate)
+            lastUseDate = Date.now
+            let dateDifference = Calendar.current.dateComponents([.day,.hour,.minute, .second], from: lastUseDate, to: countdown)
+            let daysLeftInCountdown = dateDifference.day!
+            let hoursLeftInCountdown = dateDifference.hour!
+            let minutesLeftInCountdown = dateDifference.minute!
+            let secondsLeftInCountdown = dateDifference.second!
+            if secondsLeftInCountdown <= 0 {
+                countdown = Calendar.current.date(byAdding: .day, value: 14, to: .now) ?? Date()
+                resetChallenges()
+                daysLeft = 13
+                hoursLeft = 11
+                minutesLeft = 59
+                secondsLeft = 59
+                return
             }
-            listOfChallenges[selectedChallengeIndex].completed = true
-            listOfChallenges[selectedChallengeIndex].progress = 1
-            listOfChallenges[selectedChallengeIndex].buttonClicked = true
-            
-            timerViewModel.allowInteractionDate = .now.addingTimeInterval(timerViewModel.twoWeeksInSeconds)
-        }
-        
-        func resetChallenges() {
-            listOfChallenges = listOfChallenges.compactMap { challenge in
-                var challenge = challenge
-                challenge.completed = false
-                challenge.progress = 0
-                challenge.buttonClicked = false
-                listOfChallenges = challengesForTwoWeek(number: 0)
-                return challenge
-            }
-            challengesCompleted = 0
+            daysLeft = daysLeftInCountdown
+            hoursLeft = hoursLeftInCountdown
+            minutesLeft = minutesLeftInCountdown
+            secondsLeft = secondsLeftInCountdown
+            print(countdown)
         }
     }
-    
-    struct BingoView_Previews: PreviewProvider {
-        static var previews: some View {
-            BingoView()
+
+    func handleChallengeCompletion(selectedChallengeIndex: Int) {
+        if !listOfChallenges[selectedChallengeIndex].completed {
+            challengesCompleted += 1
         }
+        listOfChallenges[selectedChallengeIndex].completed = true
+        listOfChallenges[selectedChallengeIndex].progress = 1
+        listOfChallenges[selectedChallengeIndex].buttonClicked = true
+
+        timerViewModel.allowInteractionDate = .now.addingTimeInterval(timerViewModel.twoWeeksInSeconds)
     }
-    
+
+    func resetChallenges() {
+        listOfChallenges = getChallenges()
+    }
+}
+
+struct BingoView_Previews: PreviewProvider {
+    static var previews: some View {
+        BingoView()
+    }
 }
