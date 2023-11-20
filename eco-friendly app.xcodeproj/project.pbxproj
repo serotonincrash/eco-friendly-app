@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		706AC7932B0B096F00E2CF81 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706AC7922B0B096E00E2CF81 /* HomeView.swift */; };
+		706AC7952B0B1D1800E2CF81 /* ChallengeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706AC7942B0B1D1800E2CF81 /* ChallengeView.swift */; };
+		706AC7992B0B227A00E2CF81 /* CalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706AC7982B0B227A00E2CF81 /* CalculatorView.swift */; };
+		706AC79B2B0B249000E2CF81 /* ActualCalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706AC79A2B0B249000E2CF81 /* ActualCalculatorView.swift */; };
 		D9F51DC92B0B06C800BEBB4E /* eco_friendly_appApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F51DC82B0B06C800BEBB4E /* eco_friendly_appApp.swift */; };
 		D9F51DCB2B0B06C900BEBB4E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F51DCA2B0B06C900BEBB4E /* ContentView.swift */; };
 		D9F51DCD2B0B06CC00BEBB4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9F51DCC2B0B06CC00BEBB4E /* Assets.xcassets */; };
@@ -20,6 +23,9 @@
 
 /* Begin PBXFileReference section */
 		706AC7922B0B096E00E2CF81 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		706AC7942B0B1D1800E2CF81 /* ChallengeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeView.swift; sourceTree = "<group>"; };
+		706AC7982B0B227A00E2CF81 /* CalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorView.swift; sourceTree = "<group>"; };
+		706AC79A2B0B249000E2CF81 /* ActualCalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualCalculatorView.swift; sourceTree = "<group>"; };
 		D9F51DC52B0B06C800BEBB4E /* eco-friendly app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "eco-friendly app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9F51DC82B0B06C800BEBB4E /* eco_friendly_appApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eco_friendly_appApp.swift; sourceTree = "<group>"; };
 		D9F51DCA2B0B06C900BEBB4E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -68,6 +74,9 @@
 				DF12EFF32B0B2977001D2E06 /* CalculatorView.swift */,
 				DF12EFF52B0B29A6001D2E06 /* ActualCalculatorView.swift */,
 				706AC7922B0B096E00E2CF81 /* HomeView.swift */,
+				706AC7942B0B1D1800E2CF81 /* ChallengeView.swift */,
+				706AC7982B0B227A00E2CF81 /* CalculatorView.swift */,
+				706AC79A2B0B249000E2CF81 /* ActualCalculatorView.swift */,
 				D9F51DCC2B0B06CC00BEBB4E /* Assets.xcassets */,
 				D9F51DCE2B0B06CC00BEBB4E /* Preview Content */,
 			);

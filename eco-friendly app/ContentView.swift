@@ -13,9 +13,17 @@ struct ContentView: View {
     var body: some View {
         TabView {
             HomeView()
-            .tabItem {
-                Label("Home", systemImage: "house.fill")
-            }
+                .tabItem {
+                    Label("Home", systemImage: "house.fill")
+                }
+            ChallengeView()
+                .tabItem {
+                    Label("Challenge", systemImage: "dumbbell.fill")
+                }
+            CalculatorView()
+                .tabItem {
+                    Label("Calculator", systemImage: "123.rectangle.fill")
+                }
         }
     }
 }

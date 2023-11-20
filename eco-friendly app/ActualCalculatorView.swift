@@ -2,13 +2,6 @@
 //  ActualCalculatorView.swift
 //  eco-friendly app
 //
-//  Created by Jonaven Tan on 20/11/23.
-//
-
-//
-//  ActualCalculatorView.swift
-//  eco-friendly app
-//
 //  Created by Yew Rei An on 20/11/23.
 //
 
@@ -59,3 +52,9 @@ struct CalculatorView_Previews: PreviewProvider {
         CalculatorView()
     }
 }
+struct ActualCalculatorView_Previews: PreviewProvider {
+    static var previews: some View {
+        ActualCalculatorView()
+    }
+}
+
