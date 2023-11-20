@@ -16,6 +16,10 @@ struct ContentView: View {
                 .tabItem {
                     Label("Home", systemImage: "house.fill")
                 }
+            BingoView()
+                .tabItem {
+                    Label("Bingo", systemImage: "tablecells")
+                }
             ChallengeView()
                 .tabItem {
                     Label("Challenge", systemImage: "dumbbell.fill")
@@ -33,4 +37,3 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
-//
