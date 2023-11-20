@@ -15,15 +15,15 @@ struct HomeView: View {
     var body: some View {
         VStack {
             Text("Tip Of The Day: Use public transport.")
-                .foregroundColor(.green)
+//                .foregroundColor(.green)
                 .font(.title3)
                 .bold()
                 .padding(15)
             Text("Calculate your latest carbon emissions!")
-                .foregroundColor(.red)
+//                .foregroundColor(.red)
                 .font(.title2)
             Text("Last result: \(lastCO2e) kg CO2e")
-                .foregroundColor(.red)
+//                .foregroundColor(.red)
                 .font(.title2)
 //            Spacer()
 //                .frame(height: 450)
