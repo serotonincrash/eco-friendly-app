@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		706AC7932B0B096F00E2CF81 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706AC7922B0B096E00E2CF81 /* HomeView.swift */; };
 		D9F51DC92B0B06C800BEBB4E /* eco_friendly_appApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F51DC82B0B06C800BEBB4E /* eco_friendly_appApp.swift */; };
 		D9F51DCB2B0B06C900BEBB4E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F51DCA2B0B06C900BEBB4E /* ContentView.swift */; };
 		D9F51DCD2B0B06CC00BEBB4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9F51DCC2B0B06CC00BEBB4E /* Assets.xcassets */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		706AC7922B0B096E00E2CF81 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		D9F51DC52B0B06C800BEBB4E /* eco-friendly app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "eco-friendly app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9F51DC82B0B06C800BEBB4E /* eco_friendly_appApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eco_friendly_appApp.swift; sourceTree = "<group>"; };
 		D9F51DCA2B0B06C900BEBB4E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 				DF12EFF12B0B2925001D2E06 /* ChallangeView.swift */,
 				DF12EFF32B0B2977001D2E06 /* CalculatorView.swift */,
 				DF12EFF52B0B29A6001D2E06 /* ActualCalculatorView.swift */,
+				706AC7922B0B096E00E2CF81 /* HomeView.swift */,
 				D9F51DCC2B0B06CC00BEBB4E /* Assets.xcassets */,
 				D9F51DCE2B0B06CC00BEBB4E /* Preview Content */,
 			);
@@ -152,6 +155,7 @@
 				DF12EFF22B0B2926001D2E06 /* ChallangeView.swift in Sources */,
 				DF12EFF42B0B2977001D2E06 /* CalculatorView.swift in Sources */,
 				DF12EFD62B0B1E08001D2E06 /* Homepage.swift in Sources */,
+				706AC7932B0B096F00E2CF81 /* HomeView.swift in Sources */,
 				D9F51DCB2B0B06C900BEBB4E /* ContentView.swift in Sources */,
 				DF12EFF62B0B29A6001D2E06 /* ActualCalculatorView.swift in Sources */,
 				D9F51DC92B0B06C800BEBB4E /* eco_friendly_appApp.swift in Sources */,
