@@ -11,6 +11,7 @@
 		D9F51DCB2B0B06C900BEBB4E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F51DCA2B0B06C900BEBB4E /* ContentView.swift */; };
 		D9F51DCD2B0B06CC00BEBB4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9F51DCC2B0B06CC00BEBB4E /* Assets.xcassets */; };
 		D9F51DD02B0B06CC00BEBB4E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9F51DCF2B0B06CC00BEBB4E /* Preview Assets.xcassets */; };
+		DF12EFD62B0B1E08001D2E06 /* Homepage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF12EFD52B0B1E08001D2E06 /* Homepage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		D9F51DCA2B0B06C900BEBB4E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D9F51DCC2B0B06CC00BEBB4E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D9F51DCF2B0B06CC00BEBB4E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DF12EFD52B0B1E08001D2E06 /* Homepage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Homepage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				D9F51DC82B0B06C800BEBB4E /* eco_friendly_appApp.swift */,
 				D9F51DCA2B0B06C900BEBB4E /* ContentView.swift */,
+				DF12EFD52B0B1E08001D2E06 /* Homepage.swift */,
 				D9F51DCC2B0B06CC00BEBB4E /* Assets.xcassets */,
 				D9F51DCE2B0B06CC00BEBB4E /* Preview Content */,
 			);
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF12EFD62B0B1E08001D2E06 /* Homepage.swift in Sources */,
 				D9F51DCB2B0B06C900BEBB4E /* ContentView.swift in Sources */,
 				D9F51DC92B0B06C800BEBB4E /* eco_friendly_appApp.swift in Sources */,
 			);
