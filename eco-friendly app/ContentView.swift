@@ -21,10 +21,6 @@ struct ContentView: View {
                 .tabItem {
                     Label("Bingo", systemImage: "tablecells")
                 }
-            ChallengeView()
-                .tabItem {
-                    Label("Challenge", systemImage: "dumbbell.fill")
-                }
             CalculatorView()
                 .tabItem {
                     Label("Calculator", systemImage: "123.rectangle.fill")
