@@ -12,6 +12,7 @@ struct eco_friendly_appApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(FootprintManager())
         }
     }
 }

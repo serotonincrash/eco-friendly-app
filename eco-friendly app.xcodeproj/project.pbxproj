@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		450ECD9E2B0C90F400465E94 /* tipOfTheDayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450ECD9D2B0C90F400465E94 /* tipOfTheDayView.swift */; };
 		702F825E2B0C3823007DF713 /* CalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702F825D2B0C3823007DF713 /* CalculatorView.swift */; };
 		702F82602B0C385E007DF713 /* ActualCalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702F825F2B0C385E007DF713 /* ActualCalculatorView.swift */; };
 		706AC7932B0B096F00E2CF81 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706AC7922B0B096E00E2CF81 /* HomeView.swift */; };
@@ -17,9 +18,12 @@
 		D9F51DCB2B0B06C900BEBB4E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F51DCA2B0B06C900BEBB4E /* ContentView.swift */; };
 		D9F51DCD2B0B06CC00BEBB4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9F51DCC2B0B06CC00BEBB4E /* Assets.xcassets */; };
 		D9F51DD02B0B06CC00BEBB4E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9F51DCF2B0B06CC00BEBB4E /* Preview Assets.xcassets */; };
+		DF67BC5A2B0C8E1400FBC0C2 /* FootprintManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF67BC592B0C8E1400FBC0C2 /* FootprintManager.swift */; };
+		DF67BC5C2B0C8E4400FBC0C2 /* Footprint.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF67BC5B2B0C8E4400FBC0C2 /* Footprint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		450ECD9D2B0C90F400465E94 /* tipOfTheDayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tipOfTheDayView.swift; sourceTree = "<group>"; };
 		702F825D2B0C3823007DF713 /* CalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorView.swift; sourceTree = "<group>"; };
 		702F825F2B0C385E007DF713 /* ActualCalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualCalculatorView.swift; sourceTree = "<group>"; };
 		706AC7922B0B096E00E2CF81 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -31,6 +35,8 @@
 		D9F51DCA2B0B06C900BEBB4E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D9F51DCC2B0B06CC00BEBB4E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D9F51DCF2B0B06CC00BEBB4E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DF67BC592B0C8E1400FBC0C2 /* FootprintManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootprintManager.swift; sourceTree = "<group>"; };
+		DF67BC5B2B0C8E4400FBC0C2 /* Footprint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Footprint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +69,7 @@
 		D9F51DC72B0B06C800BEBB4E /* eco-friendly app */ = {
 			isa = PBXGroup;
 			children = (
+				DF67BC5D2B0C8EB100FBC0C2 /* Data Model */,
 				D9F51DC82B0B06C800BEBB4E /* eco_friendly_appApp.swift */,
 				D9F51DCA2B0B06C900BEBB4E /* ContentView.swift */,
 				706AC7922B0B096E00E2CF81 /* HomeView.swift */,
@@ -70,6 +77,7 @@
 				706AC7942B0B1D1800E2CF81 /* ChallengeView.swift */,
 				702F825D2B0C3823007DF713 /* CalculatorView.swift */,
 				702F825F2B0C385E007DF713 /* ActualCalculatorView.swift */,
+				450ECD9D2B0C90F400465E94 /* tipOfTheDayView.swift */,
 				706AC79E2B0B423F00E2CF81 /* CarbonFootprintView.swift */,
 				D9F51DCC2B0B06CC00BEBB4E /* Assets.xcassets */,
 				D9F51DCE2B0B06CC00BEBB4E /* Preview Content */,
@@ -83,6 +91,15 @@
 				D9F51DCF2B0B06CC00BEBB4E /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		DF67BC5D2B0C8EB100FBC0C2 /* Data Model */ = {
+			isa = PBXGroup;
+			children = (
+				DF67BC592B0C8E1400FBC0C2 /* FootprintManager.swift */,
+				DF67BC5B2B0C8E4400FBC0C2 /* Footprint.swift */,
+			);
+			path = "Data Model";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,11 +175,14 @@
 				702F82602B0C385E007DF713 /* ActualCalculatorView.swift in Sources */,
 				706AC7952B0B1D1800E2CF81 /* ChallengeView.swift in Sources */,
 				706AC79F2B0B423F00E2CF81 /* CarbonFootprintView.swift in Sources */,
+				450ECD9E2B0C90F400465E94 /* tipOfTheDayView.swift in Sources */,
 				706AC7932B0B096F00E2CF81 /* HomeView.swift in Sources */,
 				706AC79D2B0B296000E2CF81 /* BingoView.swift in Sources */,
 				702F825E2B0C3823007DF713 /* CalculatorView.swift in Sources */,
 				D9F51DCB2B0B06C900BEBB4E /* ContentView.swift in Sources */,
+				DF67BC5A2B0C8E1400FBC0C2 /* FootprintManager.swift in Sources */,
 				D9F51DC92B0B06C800BEBB4E /* eco_friendly_appApp.swift in Sources */,
+				DF67BC5C2B0C8E4400FBC0C2 /* Footprint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
