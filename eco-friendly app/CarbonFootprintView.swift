@@ -9,14 +9,22 @@ import SwiftUI
 
 struct CarbonFootprintView: View {
     
-    @State var gasConsumption: Int?
-    @State var waterConsumption: Int?
-    @State var petrolConsumption: Int?
-    @State var hourOnAircraft: Int?
-    @State var minuteOnAircraft: Int?
+    @State var gasConsumption: Double
+    @State var waterConsumption: Double
+    @State var petrolConsumption: Double
+    @State var hourOnAircraft: Double
+    @State var minuteOnAircraft: Double
+    @State var totalcarbonfootprint: Double
+    
+    @State var gasCarbonFootprint: Double
+    @State var waterCarbonFootprint: Double
+    @State var petrolCarbonFootprint:Double
+    @State var airCarbonFootprint: Double
+    
+    
     
     var body: some View {
-        Text("Hello, World!")
+        print("Your carbon footprint is \(totalcarbonfootprint)")
     }
 }
 
