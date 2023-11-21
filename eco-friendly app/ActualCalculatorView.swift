@@ -9,14 +9,11 @@ import SwiftUI
 
 struct ActualCalculatorView: View {
     
-    @State var gasConsumption: Int?
-    @State var waterConsumption: Int?
-    @State var petrolConsumption: Int?
-    @State var hourOnAircraft: Int?
-    @State var minuteOnAircraft: Int?
-    @State private var selectedOptionN = 0
-    @State private var aluminiumAndTin = 0
-    let options = ["Yes", "NO"]
+    @AppStorage("gasConsumption") var gasConsumption: Int?
+    @AppStorage("waterConsumption") var waterConsumption: Int?
+    @AppStorage("petrolConsumption") var petrolConsumption: Int?
+    @AppStorage("hourOnAircraft") var hourOnAircraft: Int?
+    @AppStorage("minuteOnAircraft") var minuteOnAircraft: Int?
     
     var body: some View {
         NavigationStack {
