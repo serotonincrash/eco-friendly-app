@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CalculatorView: View {
-    
+    @EnvironmentObject var footprintManager: FootprintManager
     var body: some View {
         NavigationStack {
             HStack {
@@ -19,13 +19,21 @@ struct CalculatorView: View {
                 }
             }
             List {
+                ForEach(footprintManager.footprints) { footprint in
+                    Text("")
+                    Text("Total Carbon Footprint: \(footprint.totalCarbonFootprint)")
+                    Text("Utilities: \(footprint.utilities)")
+                    Text("Air Carbon Footprint: \(footprint.airCarbonFootprint)")
+                    Text("Date: \(footprint.date)")
+                }
             }
         }
     }
-}
-
-struct CalculatorView_Previews: PreviewProvider {
-    static var previews: some View {
-        CalculatorView()
+    
+    struct CalculatorView_Previews: PreviewProvider {
+        static var previews: some View {
+            CalculatorView()
+                .environmentObject(FootprintManager())
+        }
     }
 }

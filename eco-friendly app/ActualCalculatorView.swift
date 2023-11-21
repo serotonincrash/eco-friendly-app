@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ActualCalculatorView: View {
-    
+    @AppStorage("D") var date: Double = 0.0
     @AppStorage("gasConsumption") var gasConsumption: Int?
     @AppStorage("waterConsumption") var waterConsumption: Int?
     @AppStorage("petrolConsumption") var petrolConsumption: Int?
@@ -75,15 +75,25 @@ struct ActualCalculatorView: View {
                         }
                     }
                 }
-                NavigationLink("Calculate your carbon footprint.") {
-                    CarbonFootprintView()
+                Section("Date") {
+                    HStack {
+                        TextField("Put it in DD/MM.", text: Binding(
+                            get: { "\(self.dateAndTime ?? 0)" },
+                            set: { self.dateAndTime = Double(Int($0) ?? 0) }
+                        ))
+                        .multilineTextAlignment(.trailing)
+                        
+                        
+                        NavigationLink("Calculate your carbon footprint.") {
+                            CarbonFootprintView()
+                        }
+                        .foregroundColor(.blue)
+                    }
                 }
-                .foregroundColor(.blue)
             }
         }
     }
 }
-
 
 struct ActualCalculatorView_Previews: PreviewProvider {
     static var previews: some View {

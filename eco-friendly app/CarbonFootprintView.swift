@@ -8,13 +8,14 @@ struct CarbonFootprintView: View {
     @AppStorage("minuteOnAircraft") var minuteOnAircraft: Double = 0.0
     @AppStorage("totalcarvonfootprint") var totalCarbonFootprint: Double = 0.0
     @AppStorage("lastCO2e") var lastCO2e = 0
-    @AppStorage("Utilities") var utilities: Double = 0.0
+//    @State var date = Date()
+    @State var date = 0.0
     @State private var showResultView: Bool = false
     private var gasCarbonFootprint: Double { gasConsumption * 100 }
     private var waterCarbonFootprint: Double { waterConsumption * 50 }
     private var petrolCarbonFootprint: Double { petrolConsumption * 200 }
     private var airCarbonFootprint: Double { ((minuteOnAircraft / 60) + hourOnAircraft) * 90 }
-
+    @State private var utilities: Double = 0.0
     private func calculateCarbonFootprint() {
         totalCarbonFootprint = gasCarbonFootprint + waterCarbonFootprint + petrolCarbonFootprint + airCarbonFootprint
         lastCO2e = Int(totalCarbonFootprint)
@@ -32,7 +33,7 @@ struct CarbonFootprintView: View {
                     .buttonStyle(CustomButtonStyle())
 
                     NavigationLink(
-                        destination: CarbonFootprintResultView(totalCarbonFootprint: totalCarbonFootprint, airCarbonFootprint: airCarbonFootprint, utilities: utilities),
+                        destination: CarbonFootprintResultView(totalCarbonFootprint: totalCarbonFootprint, airCarbonFootprint: airCarbonFootprint, utilities: utilities, date: date),
                         isActive: $showResultView
                     ) {
                         EmptyView()
@@ -49,7 +50,7 @@ struct CarbonFootprintResultView: View {
     var totalCarbonFootprint: Double
     var airCarbonFootprint: Double
     var utilities: Double
-    
+    var date: Double
     @EnvironmentObject var footprintManager: FootprintManager
 
     var body: some View {
@@ -57,10 +58,11 @@ struct CarbonFootprintResultView: View {
             Text("Your total carbon footprint is \(String(format: "%.2f", totalCarbonFootprint))")
             Text("Your carbon footprint for air travel is \(String(format: "%.2f", airCarbonFootprint))")
             Text("Your carbon footprint for utilities is \(String(format: "%.2f", utilities))")
+            Text("The day you took this test is \(String(format: "%.2f", date))")
         }
         
         Button("Save") {
-            footprintManager.footprints.append(Footprint(totalCarbonFootprint: totalCarbonFootprint, airCarbonFootprint: airCarbonFootprint, utilities: utilities))
+            footprintManager.footprints.append(Footprint(totalCarbonFootprint: totalCarbonFootprint, airCarbonFootprint: airCarbonFootprint, utilities: utilities, date: date))
                    }
                    .buttonStyle(CustomButtonStyle())
                }
