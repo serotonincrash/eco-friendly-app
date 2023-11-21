@@ -20,8 +20,8 @@ struct HomeView: View {
             
             Spacer()
 
-            Image(systemName: "leaf.fill")
-                .font(.system(size: 350)) // Adjust the size as needed
+            Image(systemName: "tree.fill")
+                .font(.system(size: 250)) // Adjust the size as needed
                 .foregroundColor(.green)
                 .padding(.bottom, 50)
                 .offset(y: 10)
