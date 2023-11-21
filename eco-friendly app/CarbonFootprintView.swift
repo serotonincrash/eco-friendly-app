@@ -57,6 +57,7 @@ struct CarbonFootprintResultView: View {
             Text("Your carbon footprint for air travel is \(String(format: "%.2f", airCarbonFootprint))")
             Text("Your carbon footprint for utilities is \(String(format: "%.2f", utilities))")
         }
+        
         .navigationBarTitle("Result")
     }
 }
@@ -70,4 +71,3 @@ struct CustomButtonStyle: ButtonStyle {
             .cornerRadius(8)
     }
 }
-
