@@ -8,6 +8,7 @@ struct CarbonFootprintView: View {
     @AppStorage("minuteOnAircraft") var minuteOnAircraft: Double = 0.0
     @State private var showResultView: Bool = false
     @State private var totalCarbonFootprint: Double = 0.0
+    @AppStorage("lastCO2e") var lastCO2e = 0
 
     private var gasCarbonFootprint: Double { Double((gasConsumption ) * 100) }
     private var waterCarbonFootprint: Double { Double(waterConsumption ) * 50 }
@@ -16,6 +17,7 @@ struct CarbonFootprintView: View {
 
     private func calculateCarbonFootprint() {
         totalCarbonFootprint = gasCarbonFootprint + waterCarbonFootprint + petrolCarbonFootprint + airCarbonFootprint
+        lastCO2e = Int(totalCarbonFootprint)
     }
 
 
