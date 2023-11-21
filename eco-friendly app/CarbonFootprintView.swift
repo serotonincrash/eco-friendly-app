@@ -9,24 +9,23 @@ struct CarbonFootprintView: View {
     @State private var showResultView: Bool = false
     @State private var totalCarbonFootprint: Double = 0.0
     @AppStorage("lastCO2e") var lastCO2e = 0
+    @AppStorage("Utilities") var utilities: Double = 0.0
 
-    private var gasCarbonFootprint: Double { Double((gasConsumption ) * 100) }
-    private var waterCarbonFootprint: Double { Double(waterConsumption ) * 50 }
-    private var petrolCarbonFootprint: Double { Double(petrolConsumption ) * 200 }
-    private var airCarbonFootprint: Double { ((Double(minuteOnAircraft ) / 60) + Double(hourOnAircraft )) * 90 }
+    private var gasCarbonFootprint: Double { gasConsumption * 100 }
+    private var waterCarbonFootprint: Double { waterConsumption * 50 }
+    private var petrolCarbonFootprint: Double { petrolConsumption * 200 }
+    private var airCarbonFootprint: Double { ((minuteOnAircraft / 60) + hourOnAircraft) * 90 }
 
     private func calculateCarbonFootprint() {
         totalCarbonFootprint = gasCarbonFootprint + waterCarbonFootprint + petrolCarbonFootprint + airCarbonFootprint
         lastCO2e = Int(totalCarbonFootprint)
+        utilities = gasCarbonFootprint + waterCarbonFootprint + petrolCarbonFootprint
     }
-
 
     var body: some View {
         NavigationView {
             NavigationStack {
                 VStack {
-                    // Your user interface components here
-
                     Button("Calculate") {
                         calculateCarbonFootprint()
                         showResultView = true
@@ -34,13 +33,12 @@ struct CarbonFootprintView: View {
                     .buttonStyle(CustomButtonStyle())
 
                     NavigationLink(
-                        destination: CarbonFootprintResultView(totalCarbonFootprint: totalCarbonFootprint),
+                        destination: CarbonFootprintResultView(totalCarbonFootprint: totalCarbonFootprint, airCarbonFootprint: airCarbonFootprint, utilities: utilities),
                         isActive: $showResultView
                     ) {
                         EmptyView()
                     }
                     .hidden()
-
                 }
                 .navigationBarTitle("Calculator")
             }
@@ -50,11 +48,14 @@ struct CarbonFootprintView: View {
 
 struct CarbonFootprintResultView: View {
     var totalCarbonFootprint: Double
+    var airCarbonFootprint: Double
+    var utilities: Double
 
     var body: some View {
         VStack {
-            Text("Your carbon footprint is \(totalCarbonFootprint)")
-            // Add other content or UI elements as needed
+            Text("Your total carbon footprint is \(String(format: "%.2f", totalCarbonFootprint))")
+            Text("Your carbon footprint for air travel is \(String(format: "%.2f", airCarbonFootprint))")
+            Text("Your carbon footprint for utilities is \(String(format: "%.2f", utilities))")
         }
         .navigationBarTitle("Result")
     }
