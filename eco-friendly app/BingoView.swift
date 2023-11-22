@@ -29,7 +29,7 @@ struct BingoView: View {
     @AppStorage("challenge8completed") var challenge8completed = false
     @AppStorage("challenge9completed") var challenge9completed = false
     @AppStorage("challengesCompleted") var challengesCompleted = 0
-    
+    @StateObject private var timerViewModel = TimerViewModel()
     var body: some View {
         VStack {
             LazyVGrid(columns: Array(repeating: .init(.flexible()), count: 3), spacing: 10) {
@@ -111,7 +111,7 @@ struct BingoView: View {
                     }
                 } else if tappedIndex == 3 {
                     VStack {
-                        Text("Compost 75% of Organic Waste")
+                        Text("Compost 75% of Organic Waste within 2 weeks")
                             .bold()
                         Text("Establish a composting system and target the diversion of 75% of organic waste from landfills.")
                         Button {
@@ -131,7 +131,7 @@ struct BingoView: View {
                     }
                 } else if tappedIndex == 4 {
                     VStack {
-                        Text("Purchase 80% Recycled or Sustainable Products")
+                        Text("Purchase 80% Recycled or Sustainable Products for 2 weeks")
                             .bold()
                         Text("Quantify efforts to support environmentally friendly products by setting a goal to purchase 80% of goods made from recycled materials or produced sustainably.")
                         Button {
@@ -151,7 +151,7 @@ struct BingoView: View {
                     }
                 } else if tappedIndex == 5 {
                     VStack {
-                        Text("Complete 10 Upcycling Projects Annually")
+                        Text("Complete 1 Upcycling Projects in the next 2 weeks")
                             .bold()
                         Text("Set a numerical target for upcycling projects completed each year, focusing on creatively repurposing materials.")
                         Button {
@@ -171,7 +171,7 @@ struct BingoView: View {
                     }
                 } else if tappedIndex == 6 {
                     VStack {
-                        Text("Reduce Water Usage by 20%")
+                        Text("Reduce Water Usage by 20% in two weeks")
                             .bold()
                         Text("Measure and reduce water consumption by 20%, using water-saving technologies and mindful usage.")
                         Button {
@@ -191,7 +191,7 @@ struct BingoView: View {
                     }
                 } else if tappedIndex == 7 {
                     VStack {
-                        Text("Advocate to 100 Individuals Annually")
+                        Text("Advocate to 2 Individuals in the next 2 weeks")
                         bold()
                         Text("Quantify the impact of educational advocacy by aiming to inform and influence 100 individuals each year about recycling and sustainable practices.")
                         Button {
@@ -211,7 +211,7 @@ struct BingoView: View {
                     }
                 } else if tappedIndex == 8 {
                     VStack {
-                        Text("Cut Carbon Emissions by 15%")
+                        Text("Cut Carbon Emissions by 15% in the next 2 weeks")
                             .bold()
                         Text("Establish a numerical target to reduce personal carbon emissions by 15%, achieved through changes in transportation habits, energy use, and lifestyle choices.")
                         Button {
@@ -232,6 +232,8 @@ struct BingoView: View {
                 } else {
                     VStack {
                         Text("Please select one of the nine options given.")
+                        Text("Time Remaining: \(timeString(from: timerViewModel.twoWeeksInSeconds - timerViewModel.elapsedTime))")
+                            .padding()
                     }
                 }
             }
@@ -240,6 +242,13 @@ struct BingoView: View {
         .padding()
     }
 }
+func timeString(from time: TimeInterval) -> String {
+    let hours = Int(time) / 3600
+    let minutes = Int(time) % 3600 / 60
+    let seconds = Int(time) % 60
+    return String(format: "%02d:%02d:%02d", hours, minutes, seconds)
+}
+
 
 struct BingoView_Previews: PreviewProvider {
     static var previews: some View {
