@@ -232,7 +232,7 @@ struct BingoView: View {
                 } else {
                     VStack {
                         Text("Please select one of the nine options given.")
-                        Text("Time Remaining: \(timeString(from: timerViewModel.twoWeeksInSeconds - timerViewModel.elapsedTime))")
+                        Text("Time Remaining: \(timeString(from: timerViewModel.twoWeeksInSeconds - timerViewModel.elapsedTime)) hours left for you to complete the challanges. Better hurry!")
                             .padding()
                     }
                 }
