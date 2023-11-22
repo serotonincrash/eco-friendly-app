@@ -9,7 +9,6 @@ import SwiftUI
 
 struct BingoView: View {
     
-    @State private var progressValue: Float = 0.5
     @State private var tappedIndex: Int?
     @AppStorage("challenge1completed") var challenge1completed = false
     @AppStorage("challenge2completed") var challenge2completed = false
@@ -21,6 +20,10 @@ struct BingoView: View {
     @AppStorage("challenge8completed") var challenge8completed = false
     @AppStorage("challenge9completed") var challenge9completed = false
     @AppStorage("challengesCompleted") var challengesCompleted = 0
+    
+    var progressValue: Float {
+        Float(challengesCompleted) / 9.0
+    }
     
     var body: some View {
         VStack {
