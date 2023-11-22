@@ -9,7 +9,15 @@ import SwiftUI
 
 struct BingoView: View {
     
-    @State private var progressValue: Float = 0.5
+    @State private var progressValue1: Float = 0
+    @State private var progressValue2: Float = 0
+    @State private var progressValue3: Float = 0
+    @State private var progressValue4: Float = 0
+    @State private var progressValue5: Float = 0
+    @State private var progressValue6: Float = 0
+    @State private var progressValue7: Float = 0
+    @State private var progressValue8: Float = 0
+    @State private var progressValue9: Float = 0
     @State private var tappedIndex: Int?
     @AppStorage("challenge1completed") var challenge1completed = false
     @AppStorage("challenge2completed") var challenge2completed = false
@@ -49,9 +57,17 @@ struct BingoView: View {
                         Button {
                             challenge1completed = true
                             challengesCompleted += 1
+                            progressValue1 = 1
                         } label: {
                             Text("Done!")
                         }
+                        ProgressView(value: progressValue1)
+                            .progressViewStyle(LinearProgressViewStyle())
+                            .padding()
+                        
+                        // Display progress value
+                        Text("\(Int(progressValue1 * 100))%")
+                            .padding()
                     }
                 } else if tappedIndex == 1 {
                     VStack {
@@ -61,9 +77,17 @@ struct BingoView: View {
                         Button {
                             challenge2completed = true
                             challengesCompleted += 1
+                            progressValue2 = 1
                         } label: {
                             Text("Done!")
                         }
+                        ProgressView(value: progressValue2)
+                            .progressViewStyle(LinearProgressViewStyle())
+                            .padding()
+                        
+                        // Display progress value
+                        Text("\(Int(progressValue2 * 100))%")
+                            .padding()
                     }
                 } else if tappedIndex == 2 {
                     VStack {
@@ -73,9 +97,17 @@ struct BingoView: View {
                         Button {
                             challenge3completed = true
                             challengesCompleted += 1
+                            progressValue3 = 1
                         } label: {
                             Text("Done!")
                         }
+                        ProgressView(value: progressValue3)
+                            .progressViewStyle(LinearProgressViewStyle())
+                            .padding()
+                        
+                        // Display progress value
+                        Text("\(Int(progressValue3 * 100))%")
+                            .padding()
                     }
                 } else if tappedIndex == 3 {
                     VStack {
@@ -85,9 +117,17 @@ struct BingoView: View {
                         Button {
                             challenge4completed = true
                             challengesCompleted += 1
+                            progressValue4 = 1
                         } label: {
                             Text("Done!")
                         }
+                        ProgressView(value: progressValue4)
+                            .progressViewStyle(LinearProgressViewStyle())
+                            .padding()
+                        
+                        // Display progress value
+                        Text("\(Int(progressValue4 * 100))%")
+                            .padding()
                     }
                 } else if tappedIndex == 4 {
                     VStack {
@@ -97,9 +137,17 @@ struct BingoView: View {
                         Button {
                             challenge5completed = true
                             challengesCompleted += 1
+                            progressValue5 = 1
                         } label: {
                             Text("Done!")
                         }
+                        ProgressView(value: progressValue5)
+                            .progressViewStyle(LinearProgressViewStyle())
+                            .padding()
+                        
+                        // Display progress value
+                        Text("\(Int(progressValue5 * 100))%")
+                            .padding()
                     }
                 } else if tappedIndex == 5 {
                     VStack {
@@ -109,9 +157,17 @@ struct BingoView: View {
                         Button {
                             challenge6completed = true
                             challengesCompleted += 1
+                            progressValue6 = 1
                         } label: {
                             Text("Done!")
                         }
+                        ProgressView(value: progressValue6)
+                            .progressViewStyle(LinearProgressViewStyle())
+                            .padding()
+                        
+                        // Display progress value
+                        Text("\(Int(progressValue6 * 100))%")
+                            .padding()
                     }
                 } else if tappedIndex == 6 {
                     VStack {
@@ -121,9 +177,17 @@ struct BingoView: View {
                         Button {
                             challenge7completed = true
                             challengesCompleted += 1
+                            progressValue7 = 1
                         } label: {
                             Text("Done!")
                         }
+                        ProgressView(value: progressValue7)
+                            .progressViewStyle(LinearProgressViewStyle())
+                            .padding()
+                        
+                        // Display progress value
+                        Text("\(Int(progressValue7 * 100))%")
+                            .padding()
                     }
                 } else if tappedIndex == 7 {
                     VStack {
@@ -133,9 +197,17 @@ struct BingoView: View {
                         Button {
                             challenge8completed = true
                             challengesCompleted += 1
+                            progressValue8 = 1
                         } label: {
                             Text("Done!")
                         }
+                        ProgressView(value: progressValue8)
+                            .progressViewStyle(LinearProgressViewStyle())
+                            .padding()
+                        
+                        // Display progress value
+                        Text("\(Int(progressValue8 * 100))%")
+                            .padding()
                     }
                 } else if tappedIndex == 8 {
                     VStack {
@@ -145,9 +217,17 @@ struct BingoView: View {
                         Button {
                             challenge9completed = true
                             challengesCompleted += 1
+                            progressValue9 = 1
                         } label: {
                             Text("Done!")
                         }
+                        ProgressView(value: progressValue9)
+                            .progressViewStyle(LinearProgressViewStyle())
+                            .padding()
+                        
+                        // Display progress value
+                        Text("\(Int(progressValue9 * 100))%")
+                            .padding()
                     }
                 } else {
                     VStack {
@@ -155,14 +235,7 @@ struct BingoView: View {
                     }
                 }
             }
-            // Progress bar at the bottom
-            ProgressView(value: progressValue)
-                .progressViewStyle(LinearProgressViewStyle())
-                .padding()
-            
-            // Display progress value
-            Text("\(Int(progressValue * 100))%")
-                .padding()
+
         }
         .padding()
     }
