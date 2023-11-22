@@ -1,14 +1,8 @@
-//
-//  CalculatorView.swift
-//  eco-friendly app
-//
-//  Created by Yew Rei An on 20/11/23.
-//
-
 import SwiftUI
 
 struct CalculatorView: View {
     @EnvironmentObject var footprintManager: FootprintManager
+    
     var body: some View {
         NavigationStack {
             HStack {
@@ -19,7 +13,7 @@ struct CalculatorView: View {
                 }
             }
             List {
-                ForEach(footprintManager.footprints) { footprint in
+                ForEach(footprintManager.footprints.reversed()) { footprint in
                     Text("Date: \(footprint.date)")
                     Text("Total Carbon Footprint: \(footprint.totalCarbonFootprint)")
                     Text("Utilities: \(footprint.utilities)")
@@ -29,11 +23,11 @@ struct CalculatorView: View {
             }
         }
     }
-    
-    struct CalculatorView_Previews: PreviewProvider {
-        static var previews: some View {
-            CalculatorView()
-                .environmentObject(FootprintManager())
-        }
+}
+
+struct CalculatorView_Previews: PreviewProvider {
+    static var previews: some View {
+        CalculatorView()
+            .environmentObject(FootprintManager())
     }
 }
