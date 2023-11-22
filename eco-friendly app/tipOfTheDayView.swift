@@ -6,10 +6,6 @@
 //
 
 import SwiftUI
-
-
-
-
 struct tipOfTheDayView: View {
     var body: some View {
         let tipsList = [
@@ -110,7 +106,6 @@ struct tipOfTheDayView: View {
         ]
     }
 }
-
 struct tipOfTheDayView_Previews: PreviewProvider {
     static var previews: some View {
         tipOfTheDayView()

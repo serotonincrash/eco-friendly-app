@@ -8,8 +8,7 @@ struct CarbonFootprintView: View {
     @AppStorage("minuteOnAircraft") var minuteOnAircraft: Double = 0.0
     @AppStorage("totalcarvonfootprint") var totalCarbonFootprint: Double = 0.0
     @AppStorage("lastCO2e") var lastCO2e = 0
-//    @State var date = Date()
-    @State var date = 0.0
+    @State var selecteddate: Date = .now
     @State private var showResultView: Bool = false
     private var gasCarbonFootprint: Double { gasConsumption * 100 }
     private var waterCarbonFootprint: Double { waterConsumption * 50 }
@@ -26,6 +25,14 @@ struct CarbonFootprintView: View {
         NavigationView {
             NavigationStack {
                 VStack {
+                    DatePicker("Select a date", selection: $selecteddate, displayedComponents: .date)
+                                       .datePickerStyle(WheelDatePickerStyle())
+                                       .padding()
+
+                                   Text("Selected Date: \(selecteddate)")
+                                       .padding()
+                               }
+                               .navigationTitle("Date and Time Example")
                     Button("Calculate") {
                         calculateCarbonFootprint()
                         showResultView = true
@@ -33,7 +40,7 @@ struct CarbonFootprintView: View {
                     .buttonStyle(CustomButtonStyle())
 
                     NavigationLink(
-                        destination: CarbonFootprintResultView(totalCarbonFootprint: totalCarbonFootprint, airCarbonFootprint: airCarbonFootprint, utilities: utilities, date: date),
+                        destination: CarbonFootprintResultView(totalCarbonFootprint: totalCarbonFootprint, airCarbonFootprint: airCarbonFootprint, utilities: utilities, selecteddate: selecteddate),
                         isActive: $showResultView
                     ) {
                         EmptyView()
@@ -44,43 +51,5 @@ struct CarbonFootprintView: View {
             }
         }
     }
-}
 
-struct CarbonFootprintResultView: View {
-    var totalCarbonFootprint: Double
-    var airCarbonFootprint: Double
-    var utilities: Double
-    var date: Double
-    @EnvironmentObject var footprintManager: FootprintManager
 
-    var body: some View {
-        VStack {
-            Text("Your total carbon footprint is \(String(format: "%.2f", totalCarbonFootprint))")
-            Text("Your carbon footprint for air travel is \(String(format: "%.2f", airCarbonFootprint))")
-            Text("Your carbon footprint for utilities is \(String(format: "%.2f", utilities))")
-            Text("The day you took this test is \(String(format: "%.2f", date))")
-        }
-        
-        Button("Save") {
-            footprintManager.footprints.append(Footprint(totalCarbonFootprint: totalCarbonFootprint, airCarbonFootprint: airCarbonFootprint, utilities: utilities, date: date))
-                   }
-                   .buttonStyle(CustomButtonStyle())
-               }
-           }
-
-//private func saveData() {
-//    // Save data using UserDefaults or any other persistence method you prefer
-//    UserDefaults.standard.set(totalCarbonFootprint, forKey: "savedTotalCarbonFootprint")
-//    UserDefaults.standard.set(airCarbonFootprint, forKey: "savedAirCarbonFootprint")
-//    UserDefaults.standard.set(utilities, forKey: "savedUtilities")
-//    UserDefaults.standard.synchronize()
-//}
-struct CustomButtonStyle: ButtonStyle {
-    func makeBody(configuration: Configuration) -> some View {
-        configuration.label
-            .padding()
-            .background(Color.blue)
-            .foregroundColor(.white)
-            .cornerRadius(8)
-    }
-}

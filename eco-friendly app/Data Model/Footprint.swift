@@ -13,6 +13,6 @@ struct Footprint: Identifiable, Codable {
     var totalCarbonFootprint: Double
     var airCarbonFootprint: Double
     var utilities: Double
-    var date: Double
+    var date: Date
     
 }

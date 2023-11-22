@@ -20,11 +20,11 @@ struct CalculatorView: View {
             }
             List {
                 ForEach(footprintManager.footprints) { footprint in
-                    Text("")
+                    Text("Date: \(footprint.date)")
                     Text("Total Carbon Footprint: \(footprint.totalCarbonFootprint)")
                     Text("Utilities: \(footprint.utilities)")
                     Text("Air Carbon Footprint: \(footprint.airCarbonFootprint)")
-                    Text("Date: \(footprint.date)")
+                    Text("")
                 }
             }
         }
