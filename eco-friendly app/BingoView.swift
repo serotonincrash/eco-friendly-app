@@ -232,16 +232,29 @@ struct BingoView: View {
                 } else {
                     VStack {
                         Text("Please select one of the nine options given.")
-                        Text("Time Remaining: \(timeString(from: timerViewModel.twoWeeksInSeconds - timerViewModel.elapsedTime)) left for you to complete the challanges. Better hurry!")
+                        
+                        // Add a linear gradient to the background of the text
+                        Text("Time Remaining: \(timeString(from: timerViewModel.twoWeeksInSeconds - timerViewModel.elapsedTime)) left for you to complete the challenges. Better hurry!")
                             .padding()
+                            .foregroundColor(.gray)
+                            .background(
+                                LinearGradient(
+                                    gradient: Gradient(colors: [.white, .yellow]), // You can change these colors
+                                    startPoint: .top,
+                                    endPoint: .bottom
+                                )
+                            )
+                            .cornerRadius(10) // Optional: Add corner radius for a rounded look
+                    }
+                }
+
                     }
                 }
             }
 
         }
-        .padding()
-    }
-}
+  
+
 func timeString(from time: TimeInterval) -> String {
     let days = Int(time) / (3600 * 24)
     let hours = (Int(time) % (3600 * 24)) / 3600
