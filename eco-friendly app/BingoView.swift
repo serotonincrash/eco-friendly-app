@@ -232,7 +232,7 @@ struct BingoView: View {
                 } else {
                     VStack {
                         Text("Please select one of the nine options given.")
-                        Text("Time Remaining: \(timeString(from: timerViewModel.twoWeeksInSeconds - timerViewModel.elapsedTime)) hours left for you to complete the challanges. Better hurry!")
+                        Text("Time Remaining: \(timeString(from: timerViewModel.twoWeeksInSeconds - timerViewModel.elapsedTime)) left for you to complete the challanges. Better hurry!")
                             .padding()
                     }
                 }
@@ -243,10 +243,27 @@ struct BingoView: View {
     }
 }
 func timeString(from time: TimeInterval) -> String {
-    let hours = Int(time) / 3600
-    let minutes = Int(time) % 3600 / 60
+    let days = Int(time) / (3600 * 24)
+    let hours = (Int(time) % (3600 * 24)) / 3600
+    let minutes = (Int(time) % 3600) / 60
     let seconds = Int(time) % 60
-    return String(format: "%02d:%02d:%02d", hours, minutes, seconds)
+    
+    var timeComponents: [String] = []
+    
+    if days > 0 {
+        timeComponents.append("\(days) \(days == 1 ? "day" : "days")")
+    }
+    if hours > 0 {
+        timeComponents.append("\(hours) \(hours == 1 ? "hour" : "hours")")
+    }
+    if minutes > 0 {
+        timeComponents.append("\(minutes) \(minutes == 1 ? "minute" : "minutes")")
+    }
+    if seconds > 0 {
+        timeComponents.append("\(seconds) \(seconds == 1 ? "second" : "seconds")")
+    }
+    
+    return timeComponents.joined(separator: ", ")
 }
 
 

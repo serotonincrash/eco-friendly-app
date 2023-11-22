@@ -26,7 +26,7 @@ struct ActualCalculatorView: View {
     var body: some View {
         NavigationView {
             Form {
-                Section("Yearly Gas Consumption") {
+                Section("Monthly Gas Consumption") {
                     HStack {
                         TextField("Value from last year.", value: $gasConsumption, format: .number)
                             .multilineTextAlignment(.trailing)
@@ -35,7 +35,7 @@ struct ActualCalculatorView: View {
                     }
                 }
                 
-                Section("Yearly Water Consumption") {
+                Section("Monthly Water Consumption") {
                     HStack {
                         TextField("Value from last year.", value: $waterConsumption, format: .number)
                             .multilineTextAlignment(.trailing)
@@ -44,7 +44,7 @@ struct ActualCalculatorView: View {
                     }
                 }
                 
-                Section("Yearly Petrol Consumption") {
+                Section("Monthly Petrol Consumption") {
                     HStack {
                         TextField("Value from last year.", value: $petrolConsumption, format: .number)
                             .multilineTextAlignment(.trailing)
