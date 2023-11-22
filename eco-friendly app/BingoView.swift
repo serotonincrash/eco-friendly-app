@@ -9,6 +9,15 @@ import SwiftUI
 
 struct BingoView: View {
     
+    @State private var progressValue1: Float = 0
+    @State private var progressValue2: Float = 0
+    @State private var progressValue3: Float = 0
+    @State private var progressValue4: Float = 0
+    @State private var progressValue5: Float = 0
+    @State private var progressValue6: Float = 0
+    @State private var progressValue7: Float = 0
+    @State private var progressValue8: Float = 0
+    @State private var progressValue9: Float = 0
     @State private var tappedIndex: Int?
     @AppStorage("challenge1completed") var challenge1completed = false
     @AppStorage("challenge2completed") var challenge2completed = false
@@ -20,10 +29,6 @@ struct BingoView: View {
     @AppStorage("challenge8completed") var challenge8completed = false
     @AppStorage("challenge9completed") var challenge9completed = false
     @AppStorage("challengesCompleted") var challengesCompleted = 0
-    
-    var progressValue: Float {
-        Float(challengesCompleted) / 9.0
-    }
     
     var body: some View {
         VStack {
@@ -48,109 +53,204 @@ struct BingoView: View {
                     VStack {
                         Text("Achieve 90% Waste Diversion Rate")
                             .bold()
+                            .underline()
+                        Text("")
                         Text("Strive to divert 90% of household waste from landfills through recycling, composting, and other sustainable practices.")
+                        Text(" ")
                         Button {
                             challenge1completed = true
                             challengesCompleted += 1
+                            progressValue1 = 1
                         } label: {
                             Text("Done!")
                         }
+                        ProgressView(value: progressValue1)
+                            .progressViewStyle(LinearProgressViewStyle())
+                            .padding()
+                        
+                        // Display progress value
+                        Text("\(Int(progressValue1 * 100))%")
+                            .padding()
                     }
                 } else if tappedIndex == 1 {
                     VStack {
                         Text("Reduce Single-Use Plastics by 50%")
                             .bold()
+                            .underline()
+                        Text("")
                         Text("Set a goal to cut personal consumption of single-use plastics in half, measured by the quantity of plastic products used or purchased.")
+                        Text(" ")
                         Button {
                             challenge2completed = true
                             challengesCompleted += 1
+                            progressValue2 = 1
                         } label: {
                             Text("Done!")
                         }
+                        ProgressView(value: progressValue2)
+                            .progressViewStyle(LinearProgressViewStyle())
+                            .padding()
+                        
+                        // Display progress value
+                        Text("\(Int(progressValue2 * 100))%")
+                            .padding()
                     }
                 } else if tappedIndex == 2 {
                     VStack {
                         Text("Increase Recycling Participation to 95%")
                             .bold()
+                            .underline()
+                        Text("")
                         Text("Aim to have 95% participation in recycling initiatives within your household or community, quantified by the number of individuals actively recycling.")
                         Button {
                             challenge3completed = true
                             challengesCompleted += 1
+                            progressValue3 = 1
                         } label: {
                             Text("Done!")
                         }
+                        ProgressView(value: progressValue3)
+                            .progressViewStyle(LinearProgressViewStyle())
+                            .padding()
+                        
+                        // Display progress value
+                        Text("\(Int(progressValue3 * 100))%")
+                            .padding()
                     }
                 } else if tappedIndex == 3 {
                     VStack {
                         Text("Compost 75% of Organic Waste")
                             .bold()
+                            .underline()
+                        Text("")
                         Text("Establish a composting system and target the diversion of 75% of organic waste from landfills.")
+                        Text(" ")
                         Button {
                             challenge4completed = true
                             challengesCompleted += 1
+                            progressValue4 = 1
                         } label: {
                             Text("Done!")
                         }
+                        ProgressView(value: progressValue4)
+                            .progressViewStyle(LinearProgressViewStyle())
+                            .padding()
+                        
+                        // Display progress value
+                        Text("\(Int(progressValue4 * 100))%")
+                            .padding()
                     }
                 } else if tappedIndex == 4 {
                     VStack {
-                        Text("Purchase 80% Recycled or Sustainable Products")
+                        Text("Buy 80% Recycled/Sustainable Products")
                             .bold()
+                            .underline()
+                        Text("")
                         Text("Quantify efforts to support environmentally friendly products by setting a goal to purchase 80% of goods made from recycled materials or produced sustainably.")
                         Button {
                             challenge5completed = true
                             challengesCompleted += 1
+                            progressValue5 = 1
                         } label: {
                             Text("Done!")
                         }
+                        ProgressView(value: progressValue5)
+                            .progressViewStyle(LinearProgressViewStyle())
+                            .padding()
+                        
+                        // Display progress value
+                        Text("\(Int(progressValue5 * 100))%")
+                            .padding()
                     }
                 } else if tappedIndex == 5 {
                     VStack {
                         Text("Complete 10 Upcycling Projects Annually")
                             .bold()
+                            .underline()
+                        Text("")
                         Text("Set a numerical target for upcycling projects completed each year, focusing on creatively repurposing materials.")
+                        Text(" ")
                         Button {
                             challenge6completed = true
                             challengesCompleted += 1
+                            progressValue6 = 1
                         } label: {
                             Text("Done!")
                         }
+                        ProgressView(value: progressValue6)
+                            .progressViewStyle(LinearProgressViewStyle())
+                            .padding()
+                        
+                        // Display progress value
+                        Text("\(Int(progressValue6 * 100))%")
+                            .padding()
                     }
                 } else if tappedIndex == 6 {
                     VStack {
                         Text("Reduce Water Usage by 20%")
                             .bold()
+                            .underline()
+                        Text("")
                         Text("Measure and reduce water consumption by 20%, using water-saving technologies and mindful usage.")
+                        Text(" ")
                         Button {
                             challenge7completed = true
                             challengesCompleted += 1
+                            progressValue7 = 1
                         } label: {
                             Text("Done!")
                         }
+                        ProgressView(value: progressValue7)
+                            .progressViewStyle(LinearProgressViewStyle())
+                            .padding()
+                        
+                        // Display progress value
+                        Text("\(Int(progressValue7 * 100))%")
+                            .padding()
                     }
                 } else if tappedIndex == 7 {
                     VStack {
                         Text("Advocate to 100 Individuals Annually")
-                        bold()
+                            .bold()
+                            .underline()
+                        Text("")
                         Text("Quantify the impact of educational advocacy by aiming to inform and influence 100 individuals each year about recycling and sustainable practices.")
                         Button {
                             challenge8completed = true
                             challengesCompleted += 1
+                            progressValue8 = 1
                         } label: {
                             Text("Done!")
                         }
+                        ProgressView(value: progressValue8)
+                            .progressViewStyle(LinearProgressViewStyle())
+                            .padding()
+                        
+                        // Display progress value
+                        Text("\(Int(progressValue8 * 100))%")
+                            .padding()
                     }
                 } else if tappedIndex == 8 {
                     VStack {
                         Text("Cut Carbon Emissions by 15%")
                             .bold()
+                            .underline()
+                        Text("")
                         Text("Establish a numerical target to reduce personal carbon emissions by 15%, achieved through changes in transportation habits, energy use, and lifestyle choices.")
                         Button {
                             challenge9completed = true
                             challengesCompleted += 1
+                            progressValue9 = 1
                         } label: {
                             Text("Done!")
                         }
+                        ProgressView(value: progressValue9)
+                            .progressViewStyle(LinearProgressViewStyle())
+                            .padding()
+                        
+                        // Display progress value
+                        Text("\(Int(progressValue9 * 100))%")
+                            .padding()
                     }
                 } else {
                     VStack {
@@ -158,14 +258,7 @@ struct BingoView: View {
                     }
                 }
             }
-            // Progress bar at the bottom
-            ProgressView(value: progressValue)
-                .progressViewStyle(LinearProgressViewStyle())
-                .padding()
-            
-            // Display progress value
-            Text("\(Int(progressValue * 100))%")
-                .padding()
+
         }
         .padding()
     }
