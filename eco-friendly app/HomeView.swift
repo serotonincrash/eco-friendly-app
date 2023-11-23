@@ -16,19 +16,19 @@ struct HomeView: View {
                "Always be kind and compassionate.",
                "Never give up on your dreams.",
                " Embrace challenges as opportunities for growth.",
-               "Unplug Devices: Unplug chargers and electronics when not in use.",
-               "Use Energy Star Appliances: Choose appliances with the Energy Star label.",
+               "Unplug chargers and electronics when not in use.",
+               "Choose appliances with the Energy Star label.",
                "Remember to turn off lights when leaving a room.",
                "Seal windows and doors to prevent drafts.",
-               "Use a Programmable Thermostat: Set a schedule for heating and cooling.",
+               "Use a Programmable Thermostat",
                "Ensure your home is well-insulated.",
-               "Air Dry Clothes: Instead of using a dryer, air dry your clothes.",
-               "Limit Hot Water Usage: Take shorter showers and use cold water when possible.",
-               "Install Solar Panels: If feasible, consider solar panels for your home.",
-               "Plant Shade Trees: Plant trees to provide shade and reduce cooling needs.",
-               "Use Energy-Efficient Windows: Upgrade to energy-efficient windows.",
-               "Opt for Natural Light: Use natural light during the day.",
-               "Optimize Fridge and Freezer: Keep your fridge and freezer full but not overcrowded.",
+               "Air Dry Clothes.",
+               "Limit Hot Water Usage.",
+               "Install Solar Panels",
+               "Plant Shade Trees.",
+               "Use Energy-Efficient Windows.",
+               "Opt for Natural Light.",
+               "Keep your fridge and freezer full but not overcrowded.",
                "Consider a tankless water heater for energy efficiency.",
                "Use public transportation when possible.",
                "Carpool or share rides with others.",
@@ -111,8 +111,8 @@ struct HomeView: View {
                "Wash clothes in cold water.",
                "Hang clothes to dry instead of using a dryer.",
                "Plant trees or support organizations that plant trees.",
-               "Educate yourself about environmental issues and share your knowledge with others.",
-               "Make small changes to your everyday routine, and encourage others to do the same. "
+               "Share your knowledge with others about issues in the environment",
+               "Make small changes to your everyday routine. "
            ]
 
     var dailyTip: String {
@@ -129,7 +129,7 @@ struct HomeView: View {
                 .padding(.top, 80)
 
             Text(dailyTip)
-                .font(.title3)
+                .font(.footnote)
                 .bold()
                 .foregroundColor(.blue)
                 .multilineTextAlignment(.center)
@@ -155,7 +155,7 @@ struct HomeView: View {
             
             Text("Number of challenges completed: \(challengesCompleted)/8")
                 .font(.title2)
-                .padding(.bottom, 50)
+                .padding(.bottom, 80)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(

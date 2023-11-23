@@ -2,7 +2,7 @@ import SwiftUI
 
 struct CalculatorView: View {
     @EnvironmentObject var footprintManager: FootprintManager
-    
+
     var body: some View {
         NavigationStack {
             HStack {
@@ -14,14 +14,33 @@ struct CalculatorView: View {
             }
             List {
                 ForEach(footprintManager.footprints.reversed()) { footprint in
-                    Text("Date: \(footprint.date)")
-                    Text("Total Carbon Footprint: \(footprint.totalCarbonFootprint)")
-                    Text("Utilities: \(footprint.utilities)")
-                    Text("Air Carbon Footprint: \(footprint.airCarbonFootprint)")
-                    Text("")
+                    GeometryReader { geometry in
+                        VStack(alignment: .leading, spacing: 8) {
+                            Text("Date: \(footprint.date)")
+                            Text("Total Carbon Footprint: \(footprint.totalCarbonFootprint)")
+                            Text("Utilities: \(footprint.utilities)")
+                            Text("Air Carbon Footprint: \(footprint.airCarbonFootprint)")
+                        }
+                        .padding()
+                        .font(.footnote)
+                        .background(
+                            LinearGradient(
+                                gradient: Gradient(colors: [.green, .brown]),
+                                startPoint: .leading,
+                                endPoint: .bottomTrailing
+                            )
+                            .cornerRadius(10)
+                        )
+                        .foregroundColor(.black)
+                        .cornerRadius(10)
+                        .frame(maxWidth: geometry.size.width, minHeight: 100)
+                        .position(x: geometry.size.width / 2, y: geometry.size.height / 2)
+                    }
+                    .frame(height: 100)
                 }
             }
         }
+        .padding()
     }
 }
 
