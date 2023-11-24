@@ -153,8 +153,8 @@ struct HomeView: View {
                 .font(.title2)
                 .padding(5)
             
-            Text("Number of challenges completed since downlaoding the app: \(challengesCompleted)")
-                .font(.title2)
+            Text("Number of challenges completed since downloading the app: \(challengesCompleted)")
+                .font(.footnote)
                 .padding(.bottom, 80)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
