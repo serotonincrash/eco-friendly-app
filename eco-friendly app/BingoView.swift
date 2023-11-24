@@ -71,7 +71,6 @@ struct BingoView: View {
                             challengesCompleted += 1
                             progressValue1 = 1
                             buttonClicked1 = true
-                            
                             timerViewModel.allowInteractionDate = .now.addingTimeInterval(timerViewModel.twoWeeksInSeconds)
                         } label: {
                             Text("Done!")
@@ -106,6 +105,7 @@ struct BingoView: View {
                         } label: {
                             Text("Done!")
                         }
+                        .disabled(buttonClicked2)
                         ProgressView(value: progressValue2)
                             .progressViewStyle(LinearProgressViewStyle())
                             .padding()
@@ -134,6 +134,7 @@ struct BingoView: View {
                         } label: {
                             Text("Done!")
                         }
+                        .disabled(buttonClicked3)
                         ProgressView(value: progressValue3)
                             .progressViewStyle(LinearProgressViewStyle())
                             .padding()
@@ -163,6 +164,7 @@ struct BingoView: View {
                         } label: {
                             Text("Done!")
                         }
+                        .disabled(buttonClicked4)
                         ProgressView(value: progressValue4)
                             .progressViewStyle(LinearProgressViewStyle())
                             .padding()
@@ -191,6 +193,7 @@ struct BingoView: View {
                         } label: {
                             Text("Done!")
                         }
+                        .disabled(buttonClicked5)
                         ProgressView(value: progressValue5)
                             .progressViewStyle(LinearProgressViewStyle())
                             .padding()
@@ -219,6 +222,7 @@ struct BingoView: View {
                         } label: {
                             Text("Done!")
                         }
+                        .disabled(buttonClicked6)
                         ProgressView(value: progressValue6)
                             .progressViewStyle(LinearProgressViewStyle())
                             .padding()
@@ -247,6 +251,7 @@ struct BingoView: View {
                         } label: {
                             Text("Done!")
                         }
+                        .disabled(buttonClicked7)
                         ProgressView(value: progressValue7)
                             .progressViewStyle(LinearProgressViewStyle())
                             .padding()
@@ -275,6 +280,7 @@ struct BingoView: View {
                         } label: {
                             Text("Done!")
                         }
+                        .disabled(buttonClicked8)
                         ProgressView(value: progressValue8)
                             .progressViewStyle(LinearProgressViewStyle())
                             .padding()
@@ -303,6 +309,7 @@ struct BingoView: View {
                         } label: {
                             Text("Done!")
                         }
+                        .disabled(buttonClicked9)
                         ProgressView(value: progressValue9)
                             .progressViewStyle(LinearProgressViewStyle())
                             .padding()
