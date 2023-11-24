@@ -83,6 +83,7 @@ struct BingoView: View {
                         // Display progress value
                         Text("\(Int(progressValue1 * 100))%")
                             .padding()
+                        Text("Time Remaining: \(timeString(from: timerViewModel.twoWeeksInSeconds - timerViewModel.elapsedTime)) left for you to complete the challenges. ")
                     }
                 } else if tappedIndex == 1 {
                     VStack {
@@ -113,6 +114,7 @@ struct BingoView: View {
                         // Display progress value
                         Text("\(Int(progressValue2 * 100))%")
                             .padding()
+                        Text("Time Remaining: \(timeString(from: timerViewModel.twoWeeksInSeconds - timerViewModel.elapsedTime)) left for you to complete the challenges. ")
                     }
                 } else if tappedIndex == 2 {
                     VStack {
@@ -142,6 +144,7 @@ struct BingoView: View {
                         // Display progress value
                         Text("\(Int(progressValue3 * 100))%")
                             .padding()
+                        Text("Time Remaining: \(timeString(from: timerViewModel.twoWeeksInSeconds - timerViewModel.elapsedTime)) left for you to complete the challenges. ")
                     }
                 } else if tappedIndex == 3 {
                     VStack {
@@ -172,6 +175,7 @@ struct BingoView: View {
                         // Display progress value
                         Text("\(Int(progressValue4 * 100))%")
                             .padding()
+                        Text("Time Remaining: \(timeString(from: timerViewModel.twoWeeksInSeconds - timerViewModel.elapsedTime)) left for you to complete the challenges. ")
                     }
                 } else if tappedIndex == 4 {
                     VStack {
@@ -201,6 +205,7 @@ struct BingoView: View {
                         // Display progress value
                         Text("\(Int(progressValue5 * 100))%")
                             .padding()
+                        Text("Time Remaining: \(timeString(from: timerViewModel.twoWeeksInSeconds - timerViewModel.elapsedTime)) left for you to complete the challenges. ")
                     }
                 } else if tappedIndex == 5 {
                     VStack {
@@ -230,6 +235,7 @@ struct BingoView: View {
                         // Display progress value
                         Text("\(Int(progressValue6 * 100))%")
                             .padding()
+                        Text("Time Remaining: \(timeString(from: timerViewModel.twoWeeksInSeconds - timerViewModel.elapsedTime)) left for you to complete the challenges. ")
                     }
                 } else if tappedIndex == 6 {
                     VStack {
@@ -259,6 +265,7 @@ struct BingoView: View {
                         // Display progress value
                         Text("\(Int(progressValue7 * 100))%")
                             .padding()
+                        Text("Time Remaining: \(timeString(from: timerViewModel.twoWeeksInSeconds - timerViewModel.elapsedTime)) left for you to complete the challenges. ")
                     }
                 } else if tappedIndex == 7 {
                     VStack {
@@ -288,6 +295,7 @@ struct BingoView: View {
                         // Display progress value
                         Text("\(Int(progressValue8 * 100))%")
                             .padding()
+                        Text("Time Remaining: \(timeString(from: timerViewModel.twoWeeksInSeconds - timerViewModel.elapsedTime)) left for you to complete the challenges. ")
                     }
                 } else if tappedIndex == 8 {
                     VStack {
@@ -317,6 +325,7 @@ struct BingoView: View {
                         // Display progress value
                         Text("\(Int(progressValue9 * 100))%")
                             .padding()
+                        Text("Time Remaining: \(timeString(from: timerViewModel.twoWeeksInSeconds - timerViewModel.elapsedTime)) left for you to complete the challenges. ")
                     }
                 } else {
                     VStack {
