@@ -60,7 +60,9 @@ struct BingoView: View {
                             .multilineTextAlignment(.center)
                         Button {
                             challenge1completed = true
-                            challengesCompleted += 1
+                            if challenge1completed == false {
+                                challengesCompleted += 1
+                            }
                             progressValue1 = 1
                         } label: {
                             Text("Done!")
@@ -85,7 +87,9 @@ struct BingoView: View {
                            
                         Button {
                             challenge2completed = true
-                            challengesCompleted += 1
+                            if challenge2completed == false {
+                                challengesCompleted += 1
+                            }
                             progressValue2 = 1
                         } label: {
                             Text("Done!")
@@ -109,7 +113,9 @@ struct BingoView: View {
                             .multilineTextAlignment(.center)
                         Button {
                             challenge3completed = true
-                            challengesCompleted += 1
+                            if challenge3completed == false {
+                                challengesCompleted += 1
+                            }
                             progressValue3 = 1
                         } label: {
                             Text("Done!")
@@ -134,7 +140,9 @@ struct BingoView: View {
                           
                         Button {
                             challenge4completed = true
-                            challengesCompleted += 1
+                            if challenge4completed == false {
+                                challengesCompleted += 1
+                            }
                             progressValue4 = 1
                         } label: {
                             Text("Done!")
@@ -158,7 +166,9 @@ struct BingoView: View {
                             .multilineTextAlignment(.center)
                         Button {
                             challenge5completed = true
-                            challengesCompleted += 1
+                            if challenge5completed == false {
+                                challengesCompleted += 1
+                            }
                             progressValue5 = 1
                         } label: {
                             Text("Done!")
@@ -182,7 +192,9 @@ struct BingoView: View {
                             .multilineTextAlignment(.center)
                         Button {
                             challenge6completed = true
-                            challengesCompleted += 1
+                            if challenge6completed == false {
+                                challengesCompleted += 1
+                            }
                             progressValue6 = 1
                         } label: {
                             Text("Done!")
@@ -206,7 +218,9 @@ struct BingoView: View {
                             .multilineTextAlignment(.center)
                         Button {
                             challenge7completed = true
-                            challengesCompleted += 1
+                            if challenge7completed == false {
+                                challengesCompleted += 1
+                            }
                             progressValue7 = 1
                         } label: {
                             Text("Done!")
@@ -230,7 +244,9 @@ struct BingoView: View {
                             .multilineTextAlignment(.center)
                         Button {
                             challenge8completed = true
-                            challengesCompleted += 1
+                            if challenge8completed == false {
+                                challengesCompleted += 1
+                            }
                             progressValue8 = 1
                         } label: {
                             Text("Done!")
@@ -254,7 +270,9 @@ struct BingoView: View {
                             .multilineTextAlignment(.center)
                         Button {
                             challenge9completed = true
-                            challengesCompleted += 1
+                            if challenge9completed == false {
+                                challengesCompleted += 1
+                            }
                             progressValue9 = 1
                         } label: {
                             Text("Done!")
@@ -283,6 +301,35 @@ struct BingoView: View {
                                 )
                             )
                             .cornerRadius(10) // Optional: Add corner radius for a rounded look
+                        if challenge1completed && challenge2completed && challenge3completed && challenge4completed && challenge5completed && challenge6completed && challenge7completed && challenge8completed && challenge9completed {
+                            Button {
+                                challenge1completed = false
+                                challenge2completed = false
+                                challenge3completed = false
+                                challenge4completed = false
+                                challenge5completed = false
+                                challenge6completed = false
+                                challenge7completed = false
+                                challenge8completed = false
+                                challenge9completed = false
+                                progressValue1 = 0
+                                progressValue2 = 0
+                                progressValue3 = 0
+                                progressValue4 = 0
+                                progressValue5 = 0
+                                progressValue6 = 0
+                                progressValue7 = 0
+                                progressValue8 = 0
+                                progressValue9 = 0
+                                challengesCompleted = 0
+                            } label: {
+                                Text("Reset challenges")
+                                    .padding()
+                                    .background(Color.blue)
+                                    .foregroundColor(.white)
+                                    .cornerRadius(8)
+                            }
+                        }
                     }
                 }
 
