@@ -41,6 +41,7 @@ struct CalculatorView: View {
             }
         }
         .padding()
+        .navigationBarBackButtonHidden()
     }
 }
 
