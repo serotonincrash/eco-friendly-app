@@ -153,7 +153,7 @@ struct HomeView: View {
                 .font(.title2)
                 .padding(5)
             
-            Text("Number of challenges completed: \(challengesCompleted)/9")
+            Text("Number of challenges completed since downlaoding the app: \(challengesCompleted)")
                 .font(.title2)
                 .padding(.bottom, 80)
         }
