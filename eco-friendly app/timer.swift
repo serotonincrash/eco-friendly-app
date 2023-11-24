@@ -11,6 +11,8 @@ class TimerViewModel: ObservableObject {
     @Published var elapsedTime: TimeInterval = 0
     private var timer: Timer?
     let twoWeeksInSeconds: TimeInterval = 2 * 7 * 24 * 60 * 60 // 2 weeks in seconds
+    
+    var allowInteractionDate: Date?
 
     init() {
         startTimer()
@@ -36,5 +38,3 @@ class TimerViewModel: ObservableObject {
         timer = nil
     }
 }
-
-
