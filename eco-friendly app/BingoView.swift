@@ -38,6 +38,10 @@ struct BingoView: View {
     @AppStorage("challenge9completed") var challenge9completed = false
     @AppStorage("challengesCompleted") var challengesCompleted = 0
     @StateObject private var timerViewModel = TimerViewModel()
+    let now = Date()
+    let futureDate = Calendar.current.date(byAdding: .day, value: 14, to: .now)!
+    var components: DateComponents { Calendar.current.dateComponents([.day, .hour, .minute, .second], from: .now, to: futureDate)
+    }
     var body: some View {
         VStack {
             LazyVGrid(columns: Array(repeating: .init(.flexible()), count: 3), spacing: 10) {
@@ -85,7 +89,7 @@ struct BingoView: View {
                         // Display progress value
                         Text("\(Int(progressValue1 * 100))%")
                             .padding()
-                        Text("Time Remaining: \(timeString(from: timerViewModel.twoWeeksInSeconds - timerViewModel.elapsedTime)) left for you to complete the challenges. ")
+                        Text("You have \(components.day ?? 0)day(s),\(components.hour ?? 0)hour(s) and  \(components.minute ?? 0)min(s) from now to complete all the challanges.")
                     }
                 } else if tappedIndex == 1 {
                     VStack {
@@ -118,7 +122,7 @@ struct BingoView: View {
                         // Display progress value
                         Text("\(Int(progressValue2 * 100))%")
                             .padding()
-                        Text("Time Remaining: \(timeString(from: timerViewModel.twoWeeksInSeconds - timerViewModel.elapsedTime)) left for you to complete the challenges. ")
+                        Text("You have \(components.day ?? 0) day(s), \(components.hour ?? 0) hour(s) and  \(components.minute ?? 0) min(s) from now to complete all the challanges.")
                     }
                 } else if tappedIndex == 2 {
                     VStack {
@@ -150,7 +154,7 @@ struct BingoView: View {
                         // Display progress value
                         Text("\(Int(progressValue3 * 100))%")
                             .padding()
-                        Text("Time Remaining: \(timeString(from: timerViewModel.twoWeeksInSeconds - timerViewModel.elapsedTime)) left for you to complete the challenges. ")
+                        Text("You have \(components.day ?? 0)day(s),\(components.hour ?? 0)hour(s) and  \(components.minute ?? 0)min(s) from now to complete all the challanges.")
                     }
                 } else if tappedIndex == 3 {
                     VStack {
@@ -182,7 +186,7 @@ struct BingoView: View {
                         // Display progress value
                         Text("\(Int(progressValue4 * 100))%")
                             .padding()
-                        Text("Time Remaining: \(timeString(from: timerViewModel.twoWeeksInSeconds - timerViewModel.elapsedTime)) left for you to complete the challenges. ")
+                        Text("You have \(components.day ?? 0)day(s),\(components.hour ?? 0)hour(s) and  \(components.minute ?? 0)min(s) from now to complete all the challanges.")
                     }
                 } else if tappedIndex == 4 {
                     VStack {
@@ -214,7 +218,7 @@ struct BingoView: View {
                         // Display progress value
                         Text("\(Int(progressValue5 * 100))%")
                             .padding()
-                        Text("Time Remaining: \(timeString(from: timerViewModel.twoWeeksInSeconds - timerViewModel.elapsedTime)) left for you to complete the challenges. ")
+                        Text("You have \(components.day ?? 0)day(s),\(components.hour ?? 0)hour(s) and  \(components.minute ?? 0)min(s) from now to complete all the challanges.")
                     }
                 } else if tappedIndex == 5 {
                     VStack {
@@ -246,7 +250,7 @@ struct BingoView: View {
                         // Display progress value
                         Text("\(Int(progressValue6 * 100))%")
                             .padding()
-                        Text("Time Remaining: \(timeString(from: timerViewModel.twoWeeksInSeconds - timerViewModel.elapsedTime)) left for you to complete the challenges. ")
+                        Text("You have \(components.day ?? 0)day(s),\(components.hour ?? 0)hour(s) and  \(components.minute ?? 0)min(s) from now to complete all the challanges.")
                     }
                 } else if tappedIndex == 6 {
                     VStack {
@@ -278,7 +282,7 @@ struct BingoView: View {
                         // Display progress value
                         Text("\(Int(progressValue7 * 100))%")
                             .padding()
-                        Text("Time Remaining: \(timeString(from: timerViewModel.twoWeeksInSeconds - timerViewModel.elapsedTime)) left for you to complete the challenges. ")
+                        Text("You have \(components.day ?? 0)day(s),\(components.hour ?? 0)hour(s) and  \(components.minute ?? 0)min(s) from now to complete all the challanges.")
                     }
                 } else if tappedIndex == 7 {
                     VStack {
@@ -310,7 +314,7 @@ struct BingoView: View {
                         // Display progress value
                         Text("\(Int(progressValue8 * 100))%")
                             .padding()
-                        Text("Time Remaining: \(timeString(from: timerViewModel.twoWeeksInSeconds - timerViewModel.elapsedTime)) left for you to complete the challenges. ")
+                        Text("You have \(components.day ?? 0)day(s),\(components.hour ?? 0)hour(s) and  \(components.minute ?? 0)min(s) from now to complete all the challanges.")
                     }
                 } else if tappedIndex == 8 {
                     VStack {
@@ -342,14 +346,14 @@ struct BingoView: View {
                         // Display progress value
                         Text("\(Int(progressValue9 * 100))%")
                             .padding()
-                        Text("Time Remaining: \(timeString(from: timerViewModel.twoWeeksInSeconds - timerViewModel.elapsedTime)) left for you to complete the challenges. ")
+                        Text("You have \(components.day ?? 0)day(s),\(components.hour ?? 0)hour(s) and  \(components.minute ?? 0)min(s) from now to complete all the challanges.")
                     }
                 } else {
                     VStack {
                         Text("Please select one of the nine options given.")
                         
                         // Add a linear gradient to the background of the text
-                        Text("Time Remaining: \(timeString(from: timerViewModel.twoWeeksInSeconds - timerViewModel.elapsedTime)) left for you to complete the challenges. Better hurry!")
+                        Text("You have \(components.day ?? 0)day(s),\(components.hour ?? 0)hour(s) and  \(components.minute ?? 0)min(s) from now to complete all the challanges.")
                             .padding()
                             .foregroundColor(.gray)
                             .background(
