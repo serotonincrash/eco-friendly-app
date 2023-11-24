@@ -21,6 +21,7 @@
 		DF67BC5C2B0C8E4400FBC0C2 /* Footprint.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF67BC5B2B0C8E4400FBC0C2 /* Footprint.swift */; };
 		DFFA5F702B0D944C0078B86F /* CarbonFootprintResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFA5F6F2B0D944C0078B86F /* CarbonFootprintResultView.swift */; };
 		DFFA5F722B0D94640078B86F /* CustomButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFA5F712B0D94640078B86F /* CustomButtonStyle.swift */; };
+		DFFA5F762B0DE2C20078B86F /* timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFA5F752B0DE2C20078B86F /* timer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		DF67BC5B2B0C8E4400FBC0C2 /* Footprint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Footprint.swift; sourceTree = "<group>"; };
 		DFFA5F6F2B0D944C0078B86F /* CarbonFootprintResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarbonFootprintResultView.swift; sourceTree = "<group>"; };
 		DFFA5F712B0D94640078B86F /* CustomButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonStyle.swift; sourceTree = "<group>"; };
+		DFFA5F752B0DE2C20078B86F /* timer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = timer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 				D9F51DCA2B0B06C900BEBB4E /* ContentView.swift */,
 				706AC7922B0B096E00E2CF81 /* HomeView.swift */,
 				706AC79C2B0B296000E2CF81 /* BingoView.swift */,
+				DFFA5F752B0DE2C20078B86F /* timer.swift */,
 				702F825D2B0C3823007DF713 /* CalculatorView.swift */,
 				702F825F2B0C385E007DF713 /* ActualCalculatorView.swift */,
 				450ECD9D2B0C90F400465E94 /* tipOfTheDayView.swift */,
@@ -177,6 +180,7 @@
 			files = (
 				702F82602B0C385E007DF713 /* ActualCalculatorView.swift in Sources */,
 				706AC79F2B0B423F00E2CF81 /* CarbonFootprintView.swift in Sources */,
+				DFFA5F762B0DE2C20078B86F /* timer.swift in Sources */,
 				450ECD9E2B0C90F400465E94 /* tipOfTheDayView.swift in Sources */,
 				706AC7932B0B096F00E2CF81 /* HomeView.swift in Sources */,
 				DFFA5F702B0D944C0078B86F /* CarbonFootprintResultView.swift in Sources */,

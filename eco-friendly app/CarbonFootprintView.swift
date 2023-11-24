@@ -40,7 +40,7 @@ struct CarbonFootprintView: View {
                     .buttonStyle(CustomButtonStyle())
 
                     NavigationLink(
-                        destination: CarbonFootprintResultView(totalCarbonFootprint: totalCarbonFootprint, airCarbonFootprint: airCarbonFootprint, utilities: utilities, selecteddate: selecteddate),
+                        destination: CarbonFootprintResultView(totalCarbonFootprint: totalCarbonFootprint, airCarbonFootprint: airCarbonFootprint, utilities: utilities, selectedDate: selecteddate),
                         isActive: $showResultView
                     ) {
                         EmptyView()
