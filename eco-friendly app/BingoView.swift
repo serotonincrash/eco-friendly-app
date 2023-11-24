@@ -8,7 +8,15 @@
 import SwiftUI
 
 struct BingoView: View {
-    
+    @State private var buttonClicked1 = false
+    @State private var buttonClicked2 = false
+    @State private var buttonClicked3 = false
+    @State private var buttonClicked4 = false
+    @State private var buttonClicked5 = false
+    @State private var buttonClicked6 = false
+    @State private var buttonClicked7 = false
+    @State private var buttonClicked8 = false
+    @State private var buttonClicked9 = false
     @State private var progressValue1: Float = 0
     @State private var progressValue2: Float = 0
     @State private var progressValue3: Float = 0
@@ -64,9 +72,12 @@ struct BingoView: View {
                             }
                             challenge1completed = true
                             progressValue1 = 1
+                            buttonClicked1 = true
+                            timerViewModel.allowInteractionDate = .now.addingTimeInterval(timerViewModel.twoWeeksInSeconds)
                         } label: {
                             Text("Done!")
                         }
+                        .disabled(buttonClicked1)
                         ProgressView(value: progressValue1)
                             .progressViewStyle(LinearProgressViewStyle())
                             .padding(.bottom , 20)
@@ -74,6 +85,7 @@ struct BingoView: View {
                         // Display progress value
                         Text("\(Int(progressValue1 * 100))%")
                             .padding()
+                        Text("Time Remaining: \(timeString(from: timerViewModel.twoWeeksInSeconds - timerViewModel.elapsedTime)) left for you to complete the challenges. ")
                     }
                 } else if tappedIndex == 1 {
                     VStack {
@@ -91,9 +103,14 @@ struct BingoView: View {
                             }
                             challenge2completed = true
                             progressValue2 = 1
+                            buttonClicked2 = true
+                            
+                            timerViewModel.allowInteractionDate = .now.addingTimeInterval(timerViewModel.twoWeeksInSeconds)
+
                         } label: {
                             Text("Done!")
                         }
+                        .disabled(buttonClicked2)
                         ProgressView(value: progressValue2)
                             .progressViewStyle(LinearProgressViewStyle())
                             .padding()
@@ -101,6 +118,7 @@ struct BingoView: View {
                         // Display progress value
                         Text("\(Int(progressValue2 * 100))%")
                             .padding()
+                        Text("Time Remaining: \(timeString(from: timerViewModel.twoWeeksInSeconds - timerViewModel.elapsedTime)) left for you to complete the challenges. ")
                     }
                 } else if tappedIndex == 2 {
                     VStack {
@@ -117,9 +135,14 @@ struct BingoView: View {
                             }
                             challenge3completed = true
                             progressValue3 = 1
+                            buttonClicked3 = true
+                            
+                            timerViewModel.allowInteractionDate = .now.addingTimeInterval(timerViewModel.twoWeeksInSeconds)
+
                         } label: {
                             Text("Done!")
                         }
+                        .disabled(buttonClicked3)
                         ProgressView(value: progressValue3)
                             .progressViewStyle(LinearProgressViewStyle())
                             .padding()
@@ -127,6 +150,7 @@ struct BingoView: View {
                         // Display progress value
                         Text("\(Int(progressValue3 * 100))%")
                             .padding()
+                        Text("Time Remaining: \(timeString(from: timerViewModel.twoWeeksInSeconds - timerViewModel.elapsedTime)) left for you to complete the challenges. ")
                     }
                 } else if tappedIndex == 3 {
                     VStack {
@@ -143,9 +167,14 @@ struct BingoView: View {
                             }
                             challenge4completed = true
                             progressValue4 = 1
+                            buttonClicked4 = true
+                            
+                            timerViewModel.allowInteractionDate = .now.addingTimeInterval(timerViewModel.twoWeeksInSeconds)
+
                         } label: {
                             Text("Done!")
                         }
+                        .disabled(buttonClicked4)
                         ProgressView(value: progressValue4)
                             .progressViewStyle(LinearProgressViewStyle())
                             .padding()
@@ -153,6 +182,7 @@ struct BingoView: View {
                         // Display progress value
                         Text("\(Int(progressValue4 * 100))%")
                             .padding()
+                        Text("Time Remaining: \(timeString(from: timerViewModel.twoWeeksInSeconds - timerViewModel.elapsedTime)) left for you to complete the challenges. ")
                     }
                 } else if tappedIndex == 4 {
                     VStack {
@@ -169,9 +199,14 @@ struct BingoView: View {
                             }
                             challenge5completed = true
                             progressValue5 = 1
+                            buttonClicked5 = true
+                            
+                            timerViewModel.allowInteractionDate = .now.addingTimeInterval(timerViewModel.twoWeeksInSeconds)
+
                         } label: {
                             Text("Done!")
                         }
+                        .disabled(buttonClicked5)
                         ProgressView(value: progressValue5)
                             .progressViewStyle(LinearProgressViewStyle())
                             .padding()
@@ -179,6 +214,7 @@ struct BingoView: View {
                         // Display progress value
                         Text("\(Int(progressValue5 * 100))%")
                             .padding()
+                        Text("Time Remaining: \(timeString(from: timerViewModel.twoWeeksInSeconds - timerViewModel.elapsedTime)) left for you to complete the challenges. ")
                     }
                 } else if tappedIndex == 5 {
                     VStack {
@@ -195,9 +231,14 @@ struct BingoView: View {
                             }
                             challenge6completed = true
                             progressValue6 = 1
+                            buttonClicked6 = true
+                            
+                            timerViewModel.allowInteractionDate = .now.addingTimeInterval(timerViewModel.twoWeeksInSeconds)
+
                         } label: {
                             Text("Done!")
                         }
+                        .disabled(buttonClicked6)
                         ProgressView(value: progressValue6)
                             .progressViewStyle(LinearProgressViewStyle())
                             .padding()
@@ -205,6 +246,7 @@ struct BingoView: View {
                         // Display progress value
                         Text("\(Int(progressValue6 * 100))%")
                             .padding()
+                        Text("Time Remaining: \(timeString(from: timerViewModel.twoWeeksInSeconds - timerViewModel.elapsedTime)) left for you to complete the challenges. ")
                     }
                 } else if tappedIndex == 6 {
                     VStack {
@@ -221,9 +263,14 @@ struct BingoView: View {
                             }
                             challenge7completed = true
                             progressValue7 = 1
+                            buttonClicked7 = true
+                            
+                            timerViewModel.allowInteractionDate = .now.addingTimeInterval(timerViewModel.twoWeeksInSeconds)
+
                         } label: {
                             Text("Done!")
                         }
+                        .disabled(buttonClicked7)
                         ProgressView(value: progressValue7)
                             .progressViewStyle(LinearProgressViewStyle())
                             .padding()
@@ -231,6 +278,7 @@ struct BingoView: View {
                         // Display progress value
                         Text("\(Int(progressValue7 * 100))%")
                             .padding()
+                        Text("Time Remaining: \(timeString(from: timerViewModel.twoWeeksInSeconds - timerViewModel.elapsedTime)) left for you to complete the challenges. ")
                     }
                 } else if tappedIndex == 7 {
                     VStack {
@@ -247,9 +295,14 @@ struct BingoView: View {
                             }
                             challenge8completed = true
                             progressValue8 = 1
+                            buttonClicked8 = true
+                            
+                            timerViewModel.allowInteractionDate = .now.addingTimeInterval(timerViewModel.twoWeeksInSeconds)
+
                         } label: {
                             Text("Done!")
                         }
+                        .disabled(buttonClicked8)
                         ProgressView(value: progressValue8)
                             .progressViewStyle(LinearProgressViewStyle())
                             .padding()
@@ -257,6 +310,7 @@ struct BingoView: View {
                         // Display progress value
                         Text("\(Int(progressValue8 * 100))%")
                             .padding()
+                        Text("Time Remaining: \(timeString(from: timerViewModel.twoWeeksInSeconds - timerViewModel.elapsedTime)) left for you to complete the challenges. ")
                     }
                 } else if tappedIndex == 8 {
                     VStack {
@@ -273,9 +327,14 @@ struct BingoView: View {
                             }
                             challenge9completed = true
                             progressValue9 = 1
+                            buttonClicked9 = true
+                            
+                            timerViewModel.allowInteractionDate = .now.addingTimeInterval(timerViewModel.twoWeeksInSeconds)
+
                         } label: {
                             Text("Done!")
                         }
+                        .disabled(buttonClicked9)
                         ProgressView(value: progressValue9)
                             .progressViewStyle(LinearProgressViewStyle())
                             .padding()
@@ -283,6 +342,7 @@ struct BingoView: View {
                         // Display progress value
                         Text("\(Int(progressValue9 * 100))%")
                             .padding()
+                        Text("Time Remaining: \(timeString(from: timerViewModel.twoWeeksInSeconds - timerViewModel.elapsedTime)) left for you to complete the challenges. ")
                     }
                 } else {
                     VStack {
@@ -331,12 +391,10 @@ struct BingoView: View {
                         }
                     }
                 }
-
-                    }
-                }
             }
-
         }
+    }
+}
   
 
 func timeString(from time: TimeInterval) -> String {

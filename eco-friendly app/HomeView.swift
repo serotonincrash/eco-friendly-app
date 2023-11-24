@@ -153,9 +153,10 @@ struct HomeView: View {
                 .font(.title2)
                 .padding(5)
             
-            Text("Number of challenges completed: \(challengesCompleted)/9")
-                .font(.title2)
+            Text("Number of challenges completed: \(challengesCompleted)")
+                .font(.title3)
                 .padding(.bottom, 80)
+                .multilineTextAlignment(.center)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(
