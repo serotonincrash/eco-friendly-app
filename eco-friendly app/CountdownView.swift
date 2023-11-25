@@ -1,15 +1,10 @@
-//
-//  CountdownView.swift
-//  eco-friendly app
-//
-//  Created by Jonaven Tan on 25/11/23.
-//
-
 import SwiftUI
+import AVFoundation
 
 struct CountdownView: View {
     @State private var currentDate = Date()
     @AppStorage("daysLeft") var daysLeft: Int = 0
+    @State var audioPlayer: AVAudioPlayer?
 
     // Set your predetermined date here
     let predeterminedDate: Date = {
@@ -33,24 +28,37 @@ struct CountdownView: View {
 
     var body: some View {
         VStack {
-            
             Text("Days Left: \(daysLeftCalculated)")
                 .padding()
+                .background(.blue)
         }
         .onAppear {
+            playSound()
             updateDaysLeft()
         }
     }
 
-    private func updateDaysLeft() {
+    func playSound() {
+        guard let soundURL = Bundle.main.url(forResource: "youcandoit3", withExtension: "mp3") else {
+            return
+        }
+
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: soundURL)
+            audioPlayer?.play()
+        } catch {
+            print("Error playing sound: \(error.localizedDescription)")
+        }
+    }
+
+    func updateDaysLeft() {
         daysLeft = daysLeftCalculated
     }
-   
 }
 
 struct CountdownView_Previews: PreviewProvider {
     static var previews: some View {
         CountdownView()
-            .environmentObject(FootprintManager())
     }
 }
+

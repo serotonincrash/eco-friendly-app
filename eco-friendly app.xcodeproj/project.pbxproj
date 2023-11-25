@@ -22,6 +22,10 @@
 		DF67BC5A2B0C8E1400FBC0C2 /* FootprintManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF67BC592B0C8E1400FBC0C2 /* FootprintManager.swift */; };
 		DF67BC5C2B0C8E4400FBC0C2 /* Footprint.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF67BC5B2B0C8E4400FBC0C2 /* Footprint.swift */; };
 		DFD8C1ED2B11AA3700D12C99 /* CountdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD8C1EC2B11AA3700D12C99 /* CountdownView.swift */; };
+		DFD8C1EF2B11AE7D00D12C99 /* youcandoit3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DFD8C1EE2B11AE7D00D12C99 /* youcandoit3.mp3 */; };
+		DFD8C1F12B11B0DA00D12C99 /* Youcandoit1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = DFD8C1F02B11B0DA00D12C99 /* Youcandoit1.jpeg */; };
+		DFD8C1F32B11B12F00D12C99 /* sad hamster.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = DFD8C1F22B11B12F00D12C99 /* sad hamster.jpeg */; };
+		DFD8C1F52B11B15600D12C99 /* hamster.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = DFD8C1F42B11B15600D12C99 /* hamster.jpeg */; };
 		DFFA5F702B0D944C0078B86F /* CarbonFootprintResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFA5F6F2B0D944C0078B86F /* CarbonFootprintResultView.swift */; };
 		DFFA5F722B0D94640078B86F /* CustomButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFA5F712B0D94640078B86F /* CustomButtonStyle.swift */; };
 		DFFA5F762B0DE2C20078B86F /* timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFA5F752B0DE2C20078B86F /* timer.swift */; };
@@ -43,6 +47,10 @@
 		DF67BC592B0C8E1400FBC0C2 /* FootprintManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootprintManager.swift; sourceTree = "<group>"; };
 		DF67BC5B2B0C8E4400FBC0C2 /* Footprint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Footprint.swift; sourceTree = "<group>"; };
 		DFD8C1EC2B11AA3700D12C99 /* CountdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownView.swift; sourceTree = "<group>"; };
+		DFD8C1EE2B11AE7D00D12C99 /* youcandoit3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = youcandoit3.mp3; sourceTree = "<group>"; };
+		DFD8C1F02B11B0DA00D12C99 /* Youcandoit1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Youcandoit1.jpeg; sourceTree = "<group>"; };
+		DFD8C1F22B11B12F00D12C99 /* sad hamster.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "sad hamster.jpeg"; sourceTree = "<group>"; };
+		DFD8C1F42B11B15600D12C99 /* hamster.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hamster.jpeg; sourceTree = "<group>"; };
 		DFFA5F6F2B0D944C0078B86F /* CarbonFootprintResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarbonFootprintResultView.swift; sourceTree = "<group>"; };
 		DFFA5F712B0D94640078B86F /* CustomButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonStyle.swift; sourceTree = "<group>"; };
 		DFFA5F752B0DE2C20078B86F /* timer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = timer.swift; sourceTree = "<group>"; };
@@ -94,6 +102,10 @@
 				DFFA5F6F2B0D944C0078B86F /* CarbonFootprintResultView.swift */,
 				DFFA5F712B0D94640078B86F /* CustomButtonStyle.swift */,
 				D9F51DCC2B0B06CC00BEBB4E /* Assets.xcassets */,
+				DFD8C1F22B11B12F00D12C99 /* sad hamster.jpeg */,
+				DFD8C1F42B11B15600D12C99 /* hamster.jpeg */,
+				DFD8C1F02B11B0DA00D12C99 /* Youcandoit1.jpeg */,
+				DFD8C1EE2B11AE7D00D12C99 /* youcandoit3.mp3 */,
 				D9F51DCE2B0B06CC00BEBB4E /* Preview Content */,
 			);
 			path = "eco-friendly app";
@@ -180,8 +192,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFD8C1F12B11B0DA00D12C99 /* Youcandoit1.jpeg in Resources */,
 				D9F51DD02B0B06CC00BEBB4E /* Preview Assets.xcassets in Resources */,
 				D9F51DCD2B0B06CC00BEBB4E /* Assets.xcassets in Resources */,
+				DFD8C1EF2B11AE7D00D12C99 /* youcandoit3.mp3 in Resources */,
+				DFD8C1F52B11B15600D12C99 /* hamster.jpeg in Resources */,
+				DFD8C1F32B11B12F00D12C99 /* sad hamster.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
