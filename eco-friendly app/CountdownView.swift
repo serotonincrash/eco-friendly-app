@@ -1,3 +1,10 @@
+//
+//  CountdownView.swift
+//  eco-friendly app
+//
+//  Created by Jonaven Tan on 25/11/23.
+//
+
 import SwiftUI
 
 struct CountdownView: View {
@@ -16,30 +23,34 @@ struct CountdownView: View {
         return Calendar.current.date(from: components)!
     }()
 
-    var checkedDate: Int {
-        return Calendar.current.dateComponents([.day], from: predeterminedDate, to: currentDate).day ?? 0
+    private var checkedDate: Int {
+        Calendar.current.dateComponents([.day], from: currentDate, to: predeterminedDate).day ?? 0
+    }
+
+    private var daysLeftCalculated: Int {
+        max(0, 14 - abs(checkedDate))
     }
 
     var body: some View {
         VStack {
-            Text("Days Left: \(max(0, 14 - checkedDate))")
+            
+            Text("Days Left: \(daysLeftCalculated)")
                 .padding()
-          
         }
         .onAppear {
             updateDaysLeft()
         }
     }
 
-    func updateDaysLeft() {
-        if checkedDate == 14 {
-            daysLeft = 0
-        } else if checkedDate < 14 {
-            daysLeft = 14 - checkedDate
-        }else{
-            daysLeft = checkedDate - 14
-        }
+    private func updateDaysLeft() {
+        daysLeft = daysLeftCalculated
     }
+   
 }
 
-
+struct CountdownView_Previews: PreviewProvider {
+    static var previews: some View {
+        CountdownView()
+            .environmentObject(FootprintManager())
+    }
+}
