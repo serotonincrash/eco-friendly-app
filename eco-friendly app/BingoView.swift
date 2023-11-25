@@ -24,9 +24,11 @@ struct BingoView: View {
     @State private var tappedIndex = 0
     @AppStorage("challengesCompleted") var challengesCompleted = 0
     @StateObject private var timerViewModel = TimerViewModel()
-    @Forever("now") var now = Date()
-    @Forever("countdown")var futureDate = Calendar.current.date(byAdding: .day, value: 14, to: .now)!
-    var components: DateComponents { Calendar.current.dateComponents([.day, .hour, .minute, .second], from: .now, to: futureDate)
+//    @Forever("now") var now = Date()
+    // This seems to reset each time
+    // Should we instead store the number of seconds left until the future date?
+    @Forever("futureDate") var futureDate = Calendar.current.date(byAdding: .day, value: 14, to: .now)!.timeIntervalSince1970
+    var components: DateComponents { Calendar.current.dateComponents([.day, .hour, .minute, .second], from: .now, to: .init(timeIntervalSince1970: futureDate))
     }
 
     var body: some View {
@@ -118,6 +120,10 @@ struct BingoView: View {
                     }
                 }
             }
+        }
+        .onAppear {
+            let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+            print(documentsDirectory)
         }
     }
 }
