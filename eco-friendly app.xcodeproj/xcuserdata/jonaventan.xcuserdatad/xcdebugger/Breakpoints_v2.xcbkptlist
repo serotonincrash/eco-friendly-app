@@ -8,7 +8,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "FD514741-B7C6-421D-BCD8-5188DE79082F"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../Library/Developer/Xcode/DerivedData/eco-friendly_app-fsggxtbdjdkjkqejlxuqctqoewwh/SourcePackages/checkouts/forever/Sources/Forever/Forever.swift"

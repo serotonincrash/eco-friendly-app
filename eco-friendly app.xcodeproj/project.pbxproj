@@ -21,6 +21,7 @@
 		D9F51DD02B0B06CC00BEBB4E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9F51DCF2B0B06CC00BEBB4E /* Preview Assets.xcassets */; };
 		DF67BC5A2B0C8E1400FBC0C2 /* FootprintManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF67BC592B0C8E1400FBC0C2 /* FootprintManager.swift */; };
 		DF67BC5C2B0C8E4400FBC0C2 /* Footprint.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF67BC5B2B0C8E4400FBC0C2 /* Footprint.swift */; };
+		DFD8C1EB2B11989200D12C99 /* countdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD8C1EA2B11989200D12C99 /* countdown.swift */; };
 		DFFA5F702B0D944C0078B86F /* CarbonFootprintResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFA5F6F2B0D944C0078B86F /* CarbonFootprintResultView.swift */; };
 		DFFA5F722B0D94640078B86F /* CustomButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFA5F712B0D94640078B86F /* CustomButtonStyle.swift */; };
 		DFFA5F762B0DE2C20078B86F /* timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFA5F752B0DE2C20078B86F /* timer.swift */; };
@@ -41,6 +42,7 @@
 		D9F51DCF2B0B06CC00BEBB4E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DF67BC592B0C8E1400FBC0C2 /* FootprintManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootprintManager.swift; sourceTree = "<group>"; };
 		DF67BC5B2B0C8E4400FBC0C2 /* Footprint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Footprint.swift; sourceTree = "<group>"; };
+		DFD8C1EA2B11989200D12C99 /* countdown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = countdown.swift; sourceTree = "<group>"; };
 		DFFA5F6F2B0D944C0078B86F /* CarbonFootprintResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarbonFootprintResultView.swift; sourceTree = "<group>"; };
 		DFFA5F712B0D94640078B86F /* CustomButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonStyle.swift; sourceTree = "<group>"; };
 		DFFA5F752B0DE2C20078B86F /* timer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = timer.swift; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 				706AC79C2B0B296000E2CF81 /* BingoView.swift */,
 				70F2A9CF2B108138008E4A0F /* StructFile.swift */,
 				DFFA5F752B0DE2C20078B86F /* timer.swift */,
+				DFD8C1EA2B11989200D12C99 /* countdown.swift */,
 				702F825D2B0C3823007DF713 /* CalculatorView.swift */,
 				702F825F2B0C385E007DF713 /* ActualCalculatorView.swift */,
 				450ECD9D2B0C90F400465E94 /* tipOfTheDayView.swift */,
@@ -192,6 +195,7 @@
 				702F82602B0C385E007DF713 /* ActualCalculatorView.swift in Sources */,
 				706AC79F2B0B423F00E2CF81 /* CarbonFootprintView.swift in Sources */,
 				70F2A9D02B108138008E4A0F /* StructFile.swift in Sources */,
+				DFD8C1EB2B11989200D12C99 /* countdown.swift in Sources */,
 				DFFA5F762B0DE2C20078B86F /* timer.swift in Sources */,
 				450ECD9E2B0C90F400465E94 /* tipOfTheDayView.swift in Sources */,
 				706AC7932B0B096F00E2CF81 /* HomeView.swift in Sources */,
