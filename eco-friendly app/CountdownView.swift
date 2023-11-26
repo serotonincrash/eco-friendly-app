@@ -31,6 +31,23 @@ struct CountdownView: View {
             Text("Days Left: \(daysLeftCalculated)")
                 .padding()
                 .background(.blue)
+            Image("Youcandoit1")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 200, height: 200)
+            
+            if daysLeftCalculated == 0{
+                Image("sadhamster")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 200, height: 200)
+                Text("You have no time left")
+            } else{
+                Image("hamster")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 200, height: 200)
+            }
         }
         .onAppear {
             playSound()

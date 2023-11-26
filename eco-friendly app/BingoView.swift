@@ -79,10 +79,13 @@ struct BingoView: View {
                         CountdownView()
                     })
                 }
+                Button("Return to start") {
+                   tappedIndex = 9
+                }
             } else {
                 VStack {
                     Text("Please select one of the nine options given.")
-
+                   
                     Button("Show time left") {
                         // Toggle the boolean to present the sheet
                         isSheetPresented.toggle()
