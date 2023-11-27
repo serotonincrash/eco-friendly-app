@@ -61,8 +61,25 @@ let challenges = [
     ("Educate Others on Green Practices", "Spread awareness and inspire change by educating others on sustainable and eco-friendly practices"),
     ("Explore Second-Hand and Thrift Shopping", "Reduce textile waste and promote circular fashion by shopping for second-hand or thrifted clothing"),
     ("Practice Mindful Water Consumption", "Conserve water by fixing leaks promptly and being mindful of water usage in daily activities"),
-    ("Create a Home Vegetable Garden", "Promote self-sufficiency and reduce your carbon footprint by cultivating a home vegetable garden")
-]
+    ("Create a Home Vegetable Garden", "Promote self-sufficiency and reduce your carbon footprint by cultivating a home vegetable garden"),
+    ("Green Commuting","Reduce your carbon footprint by walking, biking, carpooling, or using public transportation."),
+    ("Energy-Efficient Home","Make your home more energy-efficient by using LED bulbs, optimizing thermostat settings, and turning off appliances when not in use."),
+    ("Meatless Mondays", "Cut down on carbon emissions associated with meat production by dedicating one day a week to plant-based meals."),
+    ("Waste-Free Living","Minimize your waste output by practicing the principles of reduce, reuse, and recycle."),
+    ("Eco-Friendly Shopping","Support sustainable and local businesses, and choose products with minimal packaging."),
+    ("Renewable Energy Advocate", "Explore solar, wind, or other sustainable options and encourage others to make the switch for a cleaner energy future."),
+    ("Water Conservation Hero","Conserve water by fixing leaks, using water-efficient appliances, and adopting mindful water usage habits."),
+    ("Green Gardening", "Create an eco-friendly garden with native plants, rainwater harvesting, and organic gardening practices."),
+    ("Carbon-Neutral Lifestyle","Offset your emissions through eco-friendly initiatives and support projects that reduce carbon in the atmosphere."),
+    ("Solar-Powered Living","Consider installing solar panels, using solar-powered gadgets, and supporting solar energy initiatives in your community."),
+    ("Zero-Carbon Cooking","Choose energy-efficient appliances, cook with sustainable ingredients, and minimize food waste."),
+    ("Plastic-Free Living","Eliminate single-use plastics from your daily routine."),
+    ("Green Technology Adopter","Explore smart home solutions, energy-efficient gadgets, and sustainable tech practices."),
+    ("Tree Planting Expert","Contribute to reforestation efforts by planting trees in your community."),
+    ("Tree Planting Champion","Organize tree-planting events and raise awareness about the importance of forests in carbon sequestration."),
+    ("10 cents Challenge","Bring your own bag for shopping instead of paying 10 cents for a new plastic bag"),
+)
+
 
 func challengesForTwoWeek(number: Int) -> [Challenge] {
     challenges[(0+number)...(8+number)].enumerated().map { (index, info) -> Challenge in
