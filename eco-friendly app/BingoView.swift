@@ -58,11 +58,11 @@ struct BingoView: View {
                     Text("\(Int(selectedChallenge.progress * 100))%")
                         .padding()
 
-                    Button("Show time left") {
+                   
                         Text("Days Left: \(totaldaysleft)")
                             .padding()
                             .background(.yellow)
-                    }
+                    
                                     }
                 Button("Return to start") {
                    tappedIndex = 9
@@ -71,11 +71,11 @@ struct BingoView: View {
                 VStack {
                     Text("Please select one of the nine options given.")
                    
-                    Button("Show time left") {
+                    
                         Text("Days Left: \(totaldaysleft)")
                             .padding()
                             .background(.yellow)
-                    }
+                    
 
                     if challengesCompleted == listOfChallenges.count {
                         Button {
