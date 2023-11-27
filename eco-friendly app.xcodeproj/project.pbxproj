@@ -22,9 +22,9 @@
 		D9F51DD02B0B06CC00BEBB4E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9F51DCF2B0B06CC00BEBB4E /* Preview Assets.xcassets */; };
 		DF40A6292B14381A0084F2B4 /* youcandoit2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = DF40A6282B14381A0084F2B4 /* youcandoit2.jpeg */; };
 		DF40A62D2B1476C50084F2B4 /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DF40A62C2B1476C50084F2B4 /* iTunesArtwork@2x.png */; };
+		DF40A62F2B147E6E0084F2B4 /* Countdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF40A62E2B147E6E0084F2B4 /* Countdown.swift */; };
 		DF67BC5A2B0C8E1400FBC0C2 /* FootprintManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF67BC592B0C8E1400FBC0C2 /* FootprintManager.swift */; };
 		DF67BC5C2B0C8E4400FBC0C2 /* Footprint.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF67BC5B2B0C8E4400FBC0C2 /* Footprint.swift */; };
-		DFD8C1ED2B11AA3700D12C99 /* CountdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD8C1EC2B11AA3700D12C99 /* CountdownView.swift */; };
 		DFD8C1EF2B11AE7D00D12C99 /* youcandoit3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DFD8C1EE2B11AE7D00D12C99 /* youcandoit3.mp3 */; };
 		DFD8C1F12B11B0DA00D12C99 /* Youcandoit1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = DFD8C1F02B11B0DA00D12C99 /* Youcandoit1.jpeg */; };
 		DFD8C1F32B11B12F00D12C99 /* sad hamster.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = DFD8C1F22B11B12F00D12C99 /* sad hamster.jpeg */; };
@@ -50,9 +50,9 @@
 		D9F51DCF2B0B06CC00BEBB4E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DF40A6282B14381A0084F2B4 /* youcandoit2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = youcandoit2.jpeg; sourceTree = "<group>"; };
 		DF40A62C2B1476C50084F2B4 /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iTunesArtwork@2x.png"; path = "iOS/iOS/iTunesArtwork@2x.png"; sourceTree = SOURCE_ROOT; };
+		DF40A62E2B147E6E0084F2B4 /* Countdown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Countdown.swift; sourceTree = "<group>"; };
 		DF67BC592B0C8E1400FBC0C2 /* FootprintManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootprintManager.swift; sourceTree = "<group>"; };
 		DF67BC5B2B0C8E4400FBC0C2 /* Footprint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Footprint.swift; sourceTree = "<group>"; };
-		DFD8C1EC2B11AA3700D12C99 /* CountdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownView.swift; sourceTree = "<group>"; };
 		DFD8C1EE2B11AE7D00D12C99 /* youcandoit3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = youcandoit3.mp3; sourceTree = "<group>"; };
 		DFD8C1F02B11B0DA00D12C99 /* Youcandoit1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Youcandoit1.jpeg; sourceTree = "<group>"; };
 		DFD8C1F22B11B12F00D12C99 /* sad hamster.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "sad hamster.jpeg"; sourceTree = "<group>"; };
@@ -99,7 +99,7 @@
 				706AC7922B0B096E00E2CF81 /* HomeView.swift */,
 				706AC79C2B0B296000E2CF81 /* BingoView.swift */,
 				D9A9C64D2B142A5C00AA89BA /* Challenges.swift */,
-				DFD8C1EC2B11AA3700D12C99 /* CountdownView.swift */,
+				DF40A62E2B147E6E0084F2B4 /* Countdown.swift */,
 				70F2A9CF2B108138008E4A0F /* StructFile.swift */,
 				DFFA5F752B0DE2C20078B86F /* timer.swift */,
 				702F825D2B0C3823007DF713 /* CalculatorView.swift */,
@@ -226,7 +226,6 @@
 				DFFA5F762B0DE2C20078B86F /* timer.swift in Sources */,
 				450ECD9E2B0C90F400465E94 /* tipOfTheDayView.swift in Sources */,
 				706AC7932B0B096F00E2CF81 /* HomeView.swift in Sources */,
-				DFD8C1ED2B11AA3700D12C99 /* CountdownView.swift in Sources */,
 				DFFA5F702B0D944C0078B86F /* CarbonFootprintResultView.swift in Sources */,
 				706AC79D2B0B296000E2CF81 /* BingoView.swift in Sources */,
 				DFFA5F722B0D94640078B86F /* CustomButtonStyle.swift in Sources */,
@@ -234,6 +233,7 @@
 				D9F51DCB2B0B06C900BEBB4E /* ContentView.swift in Sources */,
 				DF67BC5A2B0C8E1400FBC0C2 /* FootprintManager.swift in Sources */,
 				D9F51DC92B0B06C800BEBB4E /* eco_friendly_appApp.swift in Sources */,
+				DF40A62F2B147E6E0084F2B4 /* Countdown.swift in Sources */,
 				DF67BC5C2B0C8E4400FBC0C2 /* Footprint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

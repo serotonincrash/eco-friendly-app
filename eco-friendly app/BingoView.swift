@@ -10,7 +10,7 @@ struct BingoView: View {
     @StateObject private var timerViewModel = TimerViewModel()
     @Forever("countdown") var firstUseDate: Date = .now
     @State private var isSheetPresented = false
-
+    @AppStorage("daysleftchecked") var totaldaysleft: Int = 0
     var body: some View {
         VStack {
             LazyVGrid(columns: Array(repeating: .init(.flexible()), count: 3), spacing: 10) {
@@ -59,14 +59,11 @@ struct BingoView: View {
                         .padding()
 
                     Button("Show time left") {
-                        // Toggle the boolean to present the sheet
-                        isSheetPresented.toggle()
+                        Text("Days Left: \(totaldaysleft)")
+                            .padding()
+                            .background(.yellow)
                     }
-                    .padding()
-                    .sheet(isPresented: $isSheetPresented, content: {
-                        CountdownView()
-                    })
-                }
+                                    }
                 Button("Return to start") {
                    tappedIndex = 9
                 }
@@ -75,13 +72,10 @@ struct BingoView: View {
                     Text("Please select one of the nine options given.")
                    
                     Button("Show time left") {
-                        // Toggle the boolean to present the sheet
-                        isSheetPresented.toggle()
+                        Text("Days Left: \(totaldaysleft)")
+                            .padding()
+                            .background(.yellow)
                     }
-                    .padding()
-                    .sheet(isPresented: $isSheetPresented, content: {
-                        CountdownView()
-                    })
 
                     if challengesCompleted == listOfChallenges.count {
                         Button {
