@@ -15,6 +15,7 @@
 		706AC79F2B0B423F00E2CF81 /* CarbonFootprintView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706AC79E2B0B423F00E2CF81 /* CarbonFootprintView.swift */; };
 		70F2A9CE2B1080DF008E4A0F /* Forever in Frameworks */ = {isa = PBXBuildFile; productRef = 70F2A9CD2B1080DF008E4A0F /* Forever */; };
 		70F2A9D02B108138008E4A0F /* StructFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F2A9CF2B108138008E4A0F /* StructFile.swift */; };
+		D9A9C64E2B142A5C00AA89BA /* Challenges.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A9C64D2B142A5C00AA89BA /* Challenges.swift */; };
 		D9F51DC92B0B06C800BEBB4E /* eco_friendly_appApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F51DC82B0B06C800BEBB4E /* eco_friendly_appApp.swift */; };
 		D9F51DCB2B0B06C900BEBB4E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F51DCA2B0B06C900BEBB4E /* ContentView.swift */; };
 		D9F51DCD2B0B06CC00BEBB4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9F51DCC2B0B06CC00BEBB4E /* Assets.xcassets */; };
@@ -39,6 +40,7 @@
 		706AC79C2B0B296000E2CF81 /* BingoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BingoView.swift; sourceTree = "<group>"; };
 		706AC79E2B0B423F00E2CF81 /* CarbonFootprintView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarbonFootprintView.swift; sourceTree = "<group>"; };
 		70F2A9CF2B108138008E4A0F /* StructFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructFile.swift; sourceTree = "<group>"; };
+		D9A9C64D2B142A5C00AA89BA /* Challenges.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenges.swift; sourceTree = "<group>"; };
 		D9F51DC52B0B06C800BEBB4E /* eco-friendly app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "eco-friendly app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9F51DC82B0B06C800BEBB4E /* eco_friendly_appApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eco_friendly_appApp.swift; sourceTree = "<group>"; };
 		D9F51DCA2B0B06C900BEBB4E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 				D9F51DCA2B0B06C900BEBB4E /* ContentView.swift */,
 				706AC7922B0B096E00E2CF81 /* HomeView.swift */,
 				706AC79C2B0B296000E2CF81 /* BingoView.swift */,
+				D9A9C64D2B142A5C00AA89BA /* Challenges.swift */,
 				DFD8C1EC2B11AA3700D12C99 /* CountdownView.swift */,
 				70F2A9CF2B108138008E4A0F /* StructFile.swift */,
 				DFFA5F752B0DE2C20078B86F /* timer.swift */,
@@ -209,6 +212,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				702F82602B0C385E007DF713 /* ActualCalculatorView.swift in Sources */,
+				D9A9C64E2B142A5C00AA89BA /* Challenges.swift in Sources */,
 				706AC79F2B0B423F00E2CF81 /* CarbonFootprintView.swift in Sources */,
 				70F2A9D02B108138008E4A0F /* StructFile.swift in Sources */,
 				DFFA5F762B0DE2C20078B86F /* timer.swift in Sources */,

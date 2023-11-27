@@ -2,27 +2,13 @@ import SwiftUI
 import Forever
 
 struct BingoView: View {
-    @Forever("challenge") private var listOfChallenges: [Challenge] = [
-        Challenge(challengeIndex: 0, challengeTitle: "Achieve 90% Waste Diversion Rate", challengeDescription: "Strive to divert 90% of household waste from landfills through recycling, composting, and other sustainable practices.", progress: 0, completed: false, buttonClicked: false),
-        Challenge(challengeIndex: 1, challengeTitle: "Reduce Single-Use Plastics by 50%", challengeDescription: "Set a goal to cut personal consumption of single-use plastics in half, measured by the quantity of plastic products used or purchased.", progress: 0, completed: false, buttonClicked: false),
-        Challenge(challengeIndex: 2, challengeTitle: "Increase Recycling Participation to 95%", challengeDescription: "Aim to have 95% participation in recycling initiatives within your household or community, quantified by the number of individuals actively recycling.", progress: 0, completed: false, buttonClicked: false),
-        Challenge(challengeIndex: 3, challengeTitle: "Compost 75% of Organic Waste", challengeDescription: "Establish a composting system and target the diversion of 75% of organic waste from landfills.", progress: 0, completed: false, buttonClicked: false),
-        Challenge(challengeIndex: 4, challengeTitle: "Purchase 80% Recycled or Sustainable Products", challengeDescription: "Quantify efforts to support environmentally friendly products by setting a goal to purchase 80% of goods made from recycled materials or produced sustainably.", progress: 0, completed: false, buttonClicked: false),
-        Challenge(challengeIndex: 5, challengeTitle: "Complete 10 Upcycling Projects Annually", challengeDescription: "Set a numerical target for upcycling projects completed each year, focusing on creatively repurposing materials.", progress: 0, completed: false, buttonClicked: false),
-        Challenge(challengeIndex: 6, challengeTitle: "Reduce Water Usage by 20%", challengeDescription: "Measure and reduce water consumption by 20%, using water-saving technologies and mindful usage.", progress: 0, completed: false, buttonClicked: false),
-        Challenge(challengeIndex: 7, challengeTitle: "Advocate to 100 Individuals Annually", challengeDescription: "Quantify the impact of educational advocacy by aiming to inform and influence 100 individuals each year about recycling and sustainable practices.", progress: 0, completed: false, buttonClicked: false),
-        Challenge(challengeIndex: 8, challengeTitle: "Cut Carbon Emissions by 15%", challengeDescription: "Establish a numerical target to reduce personal carbon emissions by 15%, achieved through changes in transportation habits, energy use, and lifestyle choices.", progress: 0, completed: false, buttonClicked: false),
-    ]
+    @Forever("challenge") private var listOfChallenges: [Challenge] = []
 
     @State private var tappedIndex = 9
     @AppStorage("challengesCompleted") var challengesCompleted = 0
     @StateObject private var timerViewModel = TimerViewModel()
-    @Forever("now") var now = Date()
-    @Forever("countdown") var futureDate = Calendar.current.date(byAdding: .day, value: 14, to: .now)!
+    @Forever("countdown") var firstUseDate: Date = .now
     @State private var isSheetPresented = false
-    var components: DateComponents {
-        Calendar.current.dateComponents([.day, .hour, .minute, .second], from: .now, to: futureDate)
-    }
 
     var body: some View {
         VStack {
@@ -107,6 +93,22 @@ struct BingoView: View {
                         }
                     }
                 }
+            }
+        }
+        .onAppear {
+            // find out how many weeks have passed since firstUseDate
+            let timeSinceStart = Date.now.timeIntervalSince(firstUseDate)
+            
+            let numberOfWeeks = Int(timeSinceStart / timerViewModel.twoWeeksInSeconds)
+            
+            let twoWeekPair = numberOfWeeks/2
+            
+            let challenges = challengesForTwoWeek(number: twoWeekPair)
+            
+            // are these new challenges DIFFERENT from listOfChallenges
+            if challenges.first?.challengeTitle != listOfChallenges.first?.challengeTitle {
+                // replace
+                listOfChallenges = challenges
             }
         }
     }
