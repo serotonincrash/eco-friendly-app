@@ -6,6 +6,7 @@ struct BingoView: View {
 
     @State private var tappedIndex = 9
     @AppStorage("challengesCompleted") var challengesCompleted = 0
+    @AppStorage("totalchallengesCompleted") var totalchallengesCompleted = 0
     @StateObject private var timerViewModel = TimerViewModel()
     @Forever("countdown") var firstUseDate: Date = .now
     @State private var isSheetPresented = false
@@ -44,6 +45,7 @@ struct BingoView: View {
 
                     Button {
                         handleChallengeCompletion(selectedChallengeIndex: selectedChallengeIndex)
+                        totalchallengesCompleted = Int(totalchallengesCompleted) + 1
                     } label: {
                         Text("Done!")
                     }

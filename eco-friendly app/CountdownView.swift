@@ -28,20 +28,26 @@ struct CountdownView: View {
 
     var body: some View {
         VStack {
+            Image("youcandoit2")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(width: 200, height: 200)
+            
             Text("Days Left: \(daysLeftCalculated)")
                 .padding()
-                .background(.blue)
+                .background(.yellow)
+            
             Image("Youcandoit1")
                             .resizable()
                             .aspectRatio(contentMode: .fit)
                             .frame(width: 200, height: 200)
             
-            if daysLeftCalculated == 0{
+            
+            if daysLeftCalculated <= 3{
                 Image("sadhamster")
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
                                 .frame(width: 200, height: 200)
-                Text("You have no time left")
             } else{
                 Image("hamster")
                                 .resizable()

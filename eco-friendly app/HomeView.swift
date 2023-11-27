@@ -3,7 +3,7 @@ import SwiftUI
 struct HomeView: View {
 
     @AppStorage("bobuc") var bobuc = 0
-    @AppStorage("challengesCompleted") var challengesCompleted = 0
+    @AppStorage("totalchallengesCompleted") var totalchallengesCompleted = 0
     @AppStorage("lastCO2e") var lastCO2e = 0
     @AppStorage("currentTipIndex") var currentTipIndex = 0
     
@@ -153,7 +153,7 @@ struct HomeView: View {
                 .font(.title2)
                 .padding(5)
             
-            Text("Number of challenges completed: \(challengesCompleted)")
+            Text("Number of challenges completed: \(totalchallengesCompleted)")
                 .font(.title3)
                 .padding(.bottom, 80)
                 .multilineTextAlignment(.center)
