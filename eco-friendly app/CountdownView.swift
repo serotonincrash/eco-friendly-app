@@ -1,5 +1,7 @@
 import SwiftUI
 import AVFoundation
+import UserNotifications
+
 
 struct CountdownView: View {
     @State private var currentDate = Date()
@@ -58,6 +60,10 @@ struct CountdownView: View {
         .onAppear {
             playSound()
             updateDaysLeft()
+            
+            if daysLeft <= 7 {
+                            scheduleNotification()
+                        }
         }
     }
 
@@ -78,6 +84,25 @@ struct CountdownView: View {
         daysLeft = daysLeftCalculated
     }
 }
+func scheduleNotification() {
+       let content = UNMutableNotificationContent()
+       content.title = "Notification Title"
+       content.body = "You have 7 days left! Keep going!"
+       content.sound = UNNotificationSound.default
+
+       let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
+
+       let request = UNNotificationRequest(identifier: "sevenDaysLeftNotification", content: content, trigger: trigger)
+
+       UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { success, error in
+           if success {
+               UNUserNotificationCenter.current().add(request)
+           } else if let error = error {
+               print("Error requesting authorization for notifications: \(error.localizedDescription)")
+           }
+       }
+   }
+
 
 struct CountdownView_Previews: PreviewProvider {
     static var previews: some View {

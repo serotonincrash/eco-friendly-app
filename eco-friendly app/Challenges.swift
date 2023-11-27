@@ -78,7 +78,7 @@ let challenges = [
     ("Tree Planting Expert","Contribute to reforestation efforts by planting trees in your community."),
     ("Tree Planting Champion","Organize tree-planting events and raise awareness about the importance of forests in carbon sequestration."),
     ("10 cents Challenge","Bring your own bag for shopping instead of paying 10 cents for a new plastic bag"),
-)
+]
 
 
 func challengesForTwoWeek(number: Int) -> [Challenge] {
