@@ -25,7 +25,7 @@ struct CalculatorView: View {
                         .font(.footnote)
                         .background(
                             LinearGradient(
-                                gradient: Gradient(colors: [.green, .brown]),
+                                gradient: Gradient(colors: [.green, .yellow]),
                                 startPoint: .leading,
                                 endPoint: .bottomTrailing
                             )
