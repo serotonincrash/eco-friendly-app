@@ -8,6 +8,7 @@ struct CarbonFootprintView: View {
     @AppStorage("minuteOnAircraft") var minuteOnAircraft: Double = 0.0
     @AppStorage("totalcarvonfootprint") var totalCarbonFootprint: Double = 0.0
     @AppStorage("lastCO2e") var lastCO2e = 0
+    @AppStorage("Tittle") var tittle = ""
     @State var selecteddate: Date = .now
     @State private var showResultView: Bool = false
     private var gasCarbonFootprint: Double { gasConsumption * 100 }
@@ -39,7 +40,7 @@ struct CarbonFootprintView: View {
                     }
                     .buttonStyle(CustomButtonStyle())
                     NavigationLink(
-                        destination: CarbonFootprintResultView(totalCarbonFootprint: totalCarbonFootprint, airCarbonFootprint: airCarbonFootprint, utilities: utilities, selectedDate: selecteddate),
+                        destination: CarbonFootprintResultView(totalCarbonFootprint: totalCarbonFootprint, airCarbonFootprint: airCarbonFootprint, utilities: utilities, selectedDate: selecteddate, tittle: tittle),
                         isActive: $showResultView
                     ) {
                         EmptyView()

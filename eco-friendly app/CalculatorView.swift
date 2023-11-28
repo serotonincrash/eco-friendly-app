@@ -14,29 +14,30 @@ struct CalculatorView: View {
             }
             List {
                 ForEach(footprintManager.footprints.reversed()) { footprint in
-                    GeometryReader { geometry in
+                    
                         VStack(alignment: .leading, spacing: 8) {
+                            Text("Tittle: \(footprint.tittle)")
+                                .font(.title)
                             Text("Date: \(footprint.date)")
+                                .font(.footnote)
                             Text("Total Carbon Footprint: \(footprint.totalCarbonFootprint)")
-                            Text("Utilities: \(footprint.utilities)")
+                                .font(.footnote)
                             Text("Air Carbon Footprint: \(footprint.airCarbonFootprint)")
-                        }
+                                .font(.footnote)
+                            Text("Utilities: \(footprint.utilities)")
+                                .font(.footnote)
+                            
+                            
                         .padding()
-                        .font(.footnote)
                         .background(
-                            LinearGradient(
-                                gradient: Gradient(colors: [.green, .yellow]),
-                                startPoint: .leading,
-                                endPoint: .bottomTrailing
+                            
                             )
                             .cornerRadius(10)
-                        )
                         .foregroundColor(.black)
                         .cornerRadius(10)
-                        .frame(maxWidth: geometry.size.width, minHeight: 100)
-                        .position(x: geometry.size.width / 2, y: geometry.size.height / 2)
+                      
                     }
-                    .frame(height: 100)
+                    .frame(height: 150)
                 }
             }
         }
