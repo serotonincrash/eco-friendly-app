@@ -20,15 +20,10 @@
 		D9F51DCB2B0B06C900BEBB4E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F51DCA2B0B06C900BEBB4E /* ContentView.swift */; };
 		D9F51DCD2B0B06CC00BEBB4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9F51DCC2B0B06CC00BEBB4E /* Assets.xcassets */; };
 		D9F51DD02B0B06CC00BEBB4E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9F51DCF2B0B06CC00BEBB4E /* Preview Assets.xcassets */; };
-		DF40A6292B14381A0084F2B4 /* youcandoit2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = DF40A6282B14381A0084F2B4 /* youcandoit2.jpeg */; };
-		DF40A62D2B1476C50084F2B4 /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DF40A62C2B1476C50084F2B4 /* iTunesArtwork@2x.png */; };
+		DF1210E62B17190400F5DA29 /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DF1210E52B17190400F5DA29 /* iTunesArtwork@2x.png */; };
 		DF40A62F2B147E6E0084F2B4 /* Countdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF40A62E2B147E6E0084F2B4 /* Countdown.swift */; };
 		DF67BC5A2B0C8E1400FBC0C2 /* FootprintManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF67BC592B0C8E1400FBC0C2 /* FootprintManager.swift */; };
 		DF67BC5C2B0C8E4400FBC0C2 /* Footprint.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF67BC5B2B0C8E4400FBC0C2 /* Footprint.swift */; };
-		DFD8C1EF2B11AE7D00D12C99 /* youcandoit3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DFD8C1EE2B11AE7D00D12C99 /* youcandoit3.mp3 */; };
-		DFD8C1F12B11B0DA00D12C99 /* Youcandoit1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = DFD8C1F02B11B0DA00D12C99 /* Youcandoit1.jpeg */; };
-		DFD8C1F32B11B12F00D12C99 /* sad hamster.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = DFD8C1F22B11B12F00D12C99 /* sad hamster.jpeg */; };
-		DFD8C1F52B11B15600D12C99 /* hamster.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = DFD8C1F42B11B15600D12C99 /* hamster.jpeg */; };
 		DFFA5F702B0D944C0078B86F /* CarbonFootprintResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFA5F6F2B0D944C0078B86F /* CarbonFootprintResultView.swift */; };
 		DFFA5F722B0D94640078B86F /* CustomButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFA5F712B0D94640078B86F /* CustomButtonStyle.swift */; };
 		DFFA5F762B0DE2C20078B86F /* timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFA5F752B0DE2C20078B86F /* timer.swift */; };
@@ -48,15 +43,10 @@
 		D9F51DCA2B0B06C900BEBB4E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D9F51DCC2B0B06CC00BEBB4E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D9F51DCF2B0B06CC00BEBB4E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		DF40A6282B14381A0084F2B4 /* youcandoit2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = youcandoit2.jpeg; sourceTree = "<group>"; };
-		DF40A62C2B1476C50084F2B4 /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iTunesArtwork@2x.png"; path = "iOS/iOS/iTunesArtwork@2x.png"; sourceTree = SOURCE_ROOT; };
+		DF1210E52B17190400F5DA29 /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iTunesArtwork@2x.png"; path = "iOS/iOS/iOS/iTunesArtwork@2x.png"; sourceTree = SOURCE_ROOT; };
 		DF40A62E2B147E6E0084F2B4 /* Countdown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Countdown.swift; sourceTree = "<group>"; };
 		DF67BC592B0C8E1400FBC0C2 /* FootprintManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootprintManager.swift; sourceTree = "<group>"; };
 		DF67BC5B2B0C8E4400FBC0C2 /* Footprint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Footprint.swift; sourceTree = "<group>"; };
-		DFD8C1EE2B11AE7D00D12C99 /* youcandoit3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = youcandoit3.mp3; sourceTree = "<group>"; };
-		DFD8C1F02B11B0DA00D12C99 /* Youcandoit1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Youcandoit1.jpeg; sourceTree = "<group>"; };
-		DFD8C1F22B11B12F00D12C99 /* sad hamster.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "sad hamster.jpeg"; sourceTree = "<group>"; };
-		DFD8C1F42B11B15600D12C99 /* hamster.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hamster.jpeg; sourceTree = "<group>"; };
 		DFFA5F6F2B0D944C0078B86F /* CarbonFootprintResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarbonFootprintResultView.swift; sourceTree = "<group>"; };
 		DFFA5F712B0D94640078B86F /* CustomButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonStyle.swift; sourceTree = "<group>"; };
 		DFFA5F752B0DE2C20078B86F /* timer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = timer.swift; sourceTree = "<group>"; };
@@ -109,12 +99,7 @@
 				DFFA5F6F2B0D944C0078B86F /* CarbonFootprintResultView.swift */,
 				DFFA5F712B0D94640078B86F /* CustomButtonStyle.swift */,
 				D9F51DCC2B0B06CC00BEBB4E /* Assets.xcassets */,
-				DFD8C1F22B11B12F00D12C99 /* sad hamster.jpeg */,
-				DFD8C1F42B11B15600D12C99 /* hamster.jpeg */,
-				DF40A62C2B1476C50084F2B4 /* iTunesArtwork@2x.png */,
-				DFD8C1F02B11B0DA00D12C99 /* Youcandoit1.jpeg */,
-				DF40A6282B14381A0084F2B4 /* youcandoit2.jpeg */,
-				DFD8C1EE2B11AE7D00D12C99 /* youcandoit3.mp3 */,
+				DF1210E52B17190400F5DA29 /* iTunesArtwork@2x.png */,
 				D9F51DCE2B0B06CC00BEBB4E /* Preview Content */,
 			);
 			path = "eco-friendly app";
@@ -201,14 +186,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DFD8C1F12B11B0DA00D12C99 /* Youcandoit1.jpeg in Resources */,
 				D9F51DD02B0B06CC00BEBB4E /* Preview Assets.xcassets in Resources */,
-				DF40A6292B14381A0084F2B4 /* youcandoit2.jpeg in Resources */,
-				DF40A62D2B1476C50084F2B4 /* iTunesArtwork@2x.png in Resources */,
+				DF1210E62B17190400F5DA29 /* iTunesArtwork@2x.png in Resources */,
 				D9F51DCD2B0B06CC00BEBB4E /* Assets.xcassets in Resources */,
-				DFD8C1EF2B11AE7D00D12C99 /* youcandoit3.mp3 in Resources */,
-				DFD8C1F52B11B15600D12C99 /* hamster.jpeg in Resources */,
-				DFD8C1F32B11B12F00D12C99 /* sad hamster.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
