@@ -13,11 +13,12 @@ struct BingoView: View {
     @State private var isSheetPresented = false
     @State var daysLeft = 0
     
+    
     private var checkedDate: Int {
         Calendar.current.dateComponents([.day], from: countdown, to: lastUseDate).day ?? 0
     }
-    
-    var daysLeftCalculated: Int {
+
+  var daysLeftCalculated: Int {
         max(0, 14 - abs(checkedDate))
     }
     
@@ -68,32 +69,27 @@ struct BingoView: View {
                     Text("\(Int(selectedChallenge.progress * 100))%")
                         .padding()
                     
-                    NavigationLink(destination: CountdownView()) {
-                        Text("Check time left")
-                            .padding()
-                        Button("Return to start") {
-                            tappedIndex = 9
-                        }
+                    Text("You have \(daysLeft) day(s) left")
+                    Button("Return to start") {
+                        tappedIndex = 9
                     }
                 }
             } else {
                 VStack {
                     Text("Please select one of the nine options given.")
+                    Text("You have \(daysLeft) day(s) left")
+
+                   
                     
-                    
-                    NavigationLink(destination: CountdownView()) {
-                        Text("Check time left")
-                        
-                        if challengesCompleted == listOfChallenges.count {
-                            Button {
-                                resetChallenges()
-                            } label: {
-                                Text("Reset challenges")
-                                    .padding()
-                                    .background(Color.blue)
-                                    .foregroundColor(.white)
-                                    .cornerRadius(8)
-                            }
+                    if challengesCompleted == listOfChallenges.count {
+                        Button {
+                            resetChallenges()
+                        } label: {
+                            Text("Reset challenges")
+                                .padding()
+                                .background(Color.blue)
+                                .foregroundColor(.white)
+                                .cornerRadius(8)
                         }
                     }
                 }
@@ -103,6 +99,7 @@ struct BingoView: View {
             daysLeft = daysLeftCalculated
             if daysLeftCalculated == 0 {
                 countdown = Calendar.current.date(byAdding: .day, value: 14, to: countdown) ?? Date()
+                
             }
             lastUseDate = Date()
             let timeSinceStart = Date.now.timeIntervalSince(countdown)
@@ -115,7 +112,7 @@ struct BingoView: View {
             }
         }
     }
-
+    
     func handleChallengeCompletion(selectedChallengeIndex: Int) {
         if !listOfChallenges[selectedChallengeIndex].completed {
             challengesCompleted += 1
@@ -137,11 +134,11 @@ struct BingoView: View {
         }
         challengesCompleted = 0
     }
+}
 
-    struct BingoView_Previews: PreviewProvider {
-        static var previews: some View {
-            BingoView()
-        }
+struct BingoView_Previews: PreviewProvider {
+    static var previews: some View {
+        BingoView()
     }
 }
 
