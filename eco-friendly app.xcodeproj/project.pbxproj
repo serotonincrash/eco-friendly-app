@@ -20,7 +20,7 @@
 		D9F51DCB2B0B06C900BEBB4E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F51DCA2B0B06C900BEBB4E /* ContentView.swift */; };
 		D9F51DCD2B0B06CC00BEBB4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9F51DCC2B0B06CC00BEBB4E /* Assets.xcassets */; };
 		D9F51DD02B0B06CC00BEBB4E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9F51DCF2B0B06CC00BEBB4E /* Preview Assets.xcassets */; };
-		DF1210E62B17190400F5DA29 /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DF1210E52B17190400F5DA29 /* iTunesArtwork@2x.png */; };
+		DF1210EC2B197D7E00F5DA29 /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DF1210EB2B197D7E00F5DA29 /* iTunesArtwork@2x.png */; };
 		DF40A62F2B147E6E0084F2B4 /* Countdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF40A62E2B147E6E0084F2B4 /* Countdown.swift */; };
 		DF67BC5A2B0C8E1400FBC0C2 /* FootprintManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF67BC592B0C8E1400FBC0C2 /* FootprintManager.swift */; };
 		DF67BC5C2B0C8E4400FBC0C2 /* Footprint.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF67BC5B2B0C8E4400FBC0C2 /* Footprint.swift */; };
@@ -43,7 +43,7 @@
 		D9F51DCA2B0B06C900BEBB4E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D9F51DCC2B0B06CC00BEBB4E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D9F51DCF2B0B06CC00BEBB4E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		DF1210E52B17190400F5DA29 /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iTunesArtwork@2x.png"; path = "iOS/iOS/iOS/iTunesArtwork@2x.png"; sourceTree = SOURCE_ROOT; };
+		DF1210EB2B197D7E00F5DA29 /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iTunesArtwork@2x.png"; path = "iOS/iTunesArtwork@2x.png"; sourceTree = SOURCE_ROOT; };
 		DF40A62E2B147E6E0084F2B4 /* Countdown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Countdown.swift; sourceTree = "<group>"; };
 		DF67BC592B0C8E1400FBC0C2 /* FootprintManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootprintManager.swift; sourceTree = "<group>"; };
 		DF67BC5B2B0C8E4400FBC0C2 /* Footprint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Footprint.swift; sourceTree = "<group>"; };
@@ -99,7 +99,7 @@
 				DFFA5F6F2B0D944C0078B86F /* CarbonFootprintResultView.swift */,
 				DFFA5F712B0D94640078B86F /* CustomButtonStyle.swift */,
 				D9F51DCC2B0B06CC00BEBB4E /* Assets.xcassets */,
-				DF1210E52B17190400F5DA29 /* iTunesArtwork@2x.png */,
+				DF1210EB2B197D7E00F5DA29 /* iTunesArtwork@2x.png */,
 				D9F51DCE2B0B06CC00BEBB4E /* Preview Content */,
 			);
 			path = "eco-friendly app";
@@ -187,7 +187,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9F51DD02B0B06CC00BEBB4E /* Preview Assets.xcassets in Resources */,
-				DF1210E62B17190400F5DA29 /* iTunesArtwork@2x.png in Resources */,
+				DF1210EC2B197D7E00F5DA29 /* iTunesArtwork@2x.png in Resources */,
 				D9F51DCD2B0B06CC00BEBB4E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
