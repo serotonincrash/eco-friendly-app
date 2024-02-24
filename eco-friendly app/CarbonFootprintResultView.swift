@@ -29,7 +29,7 @@ struct CarbonFootprintResultView: View {
         .buttonStyle(CustomButtonStyle())
         
 
-        NavigationLink(destination: CalculatorView()) {
+        NavigationLink(destination: FootprintListView()) {
             Text("Return to start")
                 .padding()
                 .foregroundColor(.white)

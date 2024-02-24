@@ -122,12 +122,6 @@ struct HomeView: View {
 
     var body: some View {
         VStack(spacing: 20) {
-            Text("Tip Of The Day:")
-                .font(.title3)
-                .bold()
-                .foregroundColor(.blue)
-                .padding(.top, 80)
-
             Text(dailyTip)
                 .font(.footnote)
                 .bold()
@@ -138,18 +132,16 @@ struct HomeView: View {
                 .cornerRadius(10)
                 .underline()
 
-            Spacer()
-
             Image(systemName: "tree.fill")
                 .font(.system(size: 250))
                 .foregroundColor(.green)
                 .padding(.bottom, 50)
                 .offset(y: 10)
             
-            Text("Calculate your latest carbon emissions!")
-                .font(.title2)
+//            Text("Calculate your latest carbon emissions!")
+//                .font(.title2)
             
-            Text("Last result: \(lastCO2e) kg CO2e")
+            Text("Your latest carbon emissions: \(lastCO2e) kg")
                 .font(.title2)
                 .padding(5)
             
@@ -159,13 +151,13 @@ struct HomeView: View {
                 .multilineTextAlignment(.center)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(
-            LinearGradient(
-                gradient: Gradient(colors: [Color.white, Color.gray]),
-                startPoint: .topLeading,
-                endPoint: .bottom
-            )
-        )
+//        .background(
+//            LinearGradient(
+//                gradient: Gradient(colors: [Color.white, Color.gray]),
+//                startPoint: .topLeading,
+//                endPoint: .bottom
+//            )
+//        )
         .edgesIgnoringSafeArea(.all)
         .onAppear {
             // Increment the currentTipIndex when the view appears

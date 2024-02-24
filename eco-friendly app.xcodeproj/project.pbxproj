@@ -7,14 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		450ECD9E2B0C90F400465E94 /* tipOfTheDayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450ECD9D2B0C90F400465E94 /* tipOfTheDayView.swift */; };
-		702F825E2B0C3823007DF713 /* CalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702F825D2B0C3823007DF713 /* CalculatorView.swift */; };
-		702F82602B0C385E007DF713 /* ActualCalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702F825F2B0C385E007DF713 /* ActualCalculatorView.swift */; };
+		1A3FF4702B2D8DFE0045748E /* FootprintDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3FF46F2B2D8DFE0045748E /* FootprintDetailView.swift */; };
+		1A3FF4722B2DA3C80045748E /* CountdownTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3FF4712B2DA3C80045748E /* CountdownTimerView.swift */; };
+		702F825E2B0C3823007DF713 /* FootprintListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702F825D2B0C3823007DF713 /* FootprintListView.swift */; };
+		702F82602B0C385E007DF713 /* CreateFootprintView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702F825F2B0C385E007DF713 /* CreateFootprintView.swift */; };
 		706AC7932B0B096F00E2CF81 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706AC7922B0B096E00E2CF81 /* HomeView.swift */; };
 		706AC79D2B0B296000E2CF81 /* BingoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706AC79C2B0B296000E2CF81 /* BingoView.swift */; };
-		706AC79F2B0B423F00E2CF81 /* CarbonFootprintView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706AC79E2B0B423F00E2CF81 /* CarbonFootprintView.swift */; };
 		70F2A9CE2B1080DF008E4A0F /* Forever in Frameworks */ = {isa = PBXBuildFile; productRef = 70F2A9CD2B1080DF008E4A0F /* Forever */; };
-		70F2A9D02B108138008E4A0F /* StructFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F2A9CF2B108138008E4A0F /* StructFile.swift */; };
+		70F2A9D02B108138008E4A0F /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F2A9CF2B108138008E4A0F /* Challenge.swift */; };
 		D9A9C64E2B142A5C00AA89BA /* Challenges.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A9C64D2B142A5C00AA89BA /* Challenges.swift */; };
 		D9F51DC92B0B06C800BEBB4E /* eco_friendly_appApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F51DC82B0B06C800BEBB4E /* eco_friendly_appApp.swift */; };
 		D9F51DCB2B0B06C900BEBB4E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F51DCA2B0B06C900BEBB4E /* ContentView.swift */; };
@@ -23,19 +23,17 @@
 		DF1210EC2B197D7E00F5DA29 /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DF1210EB2B197D7E00F5DA29 /* iTunesArtwork@2x.png */; };
 		DF67BC5A2B0C8E1400FBC0C2 /* FootprintManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF67BC592B0C8E1400FBC0C2 /* FootprintManager.swift */; };
 		DF67BC5C2B0C8E4400FBC0C2 /* Footprint.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF67BC5B2B0C8E4400FBC0C2 /* Footprint.swift */; };
-		DFFA5F702B0D944C0078B86F /* CarbonFootprintResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFA5F6F2B0D944C0078B86F /* CarbonFootprintResultView.swift */; };
 		DFFA5F722B0D94640078B86F /* CustomButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFA5F712B0D94640078B86F /* CustomButtonStyle.swift */; };
-		DFFA5F762B0DE2C20078B86F /* timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFA5F752B0DE2C20078B86F /* timer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		450ECD9D2B0C90F400465E94 /* tipOfTheDayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tipOfTheDayView.swift; sourceTree = "<group>"; };
-		702F825D2B0C3823007DF713 /* CalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorView.swift; sourceTree = "<group>"; };
-		702F825F2B0C385E007DF713 /* ActualCalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualCalculatorView.swift; sourceTree = "<group>"; };
+		1A3FF46F2B2D8DFE0045748E /* FootprintDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootprintDetailView.swift; sourceTree = "<group>"; };
+		1A3FF4712B2DA3C80045748E /* CountdownTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownTimerView.swift; sourceTree = "<group>"; };
+		702F825D2B0C3823007DF713 /* FootprintListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootprintListView.swift; sourceTree = "<group>"; };
+		702F825F2B0C385E007DF713 /* CreateFootprintView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateFootprintView.swift; sourceTree = "<group>"; };
 		706AC7922B0B096E00E2CF81 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		706AC79C2B0B296000E2CF81 /* BingoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BingoView.swift; sourceTree = "<group>"; };
-		706AC79E2B0B423F00E2CF81 /* CarbonFootprintView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarbonFootprintView.swift; sourceTree = "<group>"; };
-		70F2A9CF2B108138008E4A0F /* StructFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructFile.swift; sourceTree = "<group>"; };
+		70F2A9CF2B108138008E4A0F /* Challenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
 		D9A9C64D2B142A5C00AA89BA /* Challenges.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenges.swift; sourceTree = "<group>"; };
 		D9F51DC52B0B06C800BEBB4E /* eco-friendly app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "eco-friendly app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9F51DC82B0B06C800BEBB4E /* eco_friendly_appApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eco_friendly_appApp.swift; sourceTree = "<group>"; };
@@ -45,9 +43,7 @@
 		DF1210EB2B197D7E00F5DA29 /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iTunesArtwork@2x.png"; path = "iOS/iTunesArtwork@2x.png"; sourceTree = SOURCE_ROOT; };
 		DF67BC592B0C8E1400FBC0C2 /* FootprintManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootprintManager.swift; sourceTree = "<group>"; };
 		DF67BC5B2B0C8E4400FBC0C2 /* Footprint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Footprint.swift; sourceTree = "<group>"; };
-		DFFA5F6F2B0D944C0078B86F /* CarbonFootprintResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarbonFootprintResultView.swift; sourceTree = "<group>"; };
 		DFFA5F712B0D94640078B86F /* CustomButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonStyle.swift; sourceTree = "<group>"; };
-		DFFA5F752B0DE2C20078B86F /* timer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = timer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,14 +82,11 @@
 				D9F51DCA2B0B06C900BEBB4E /* ContentView.swift */,
 				706AC7922B0B096E00E2CF81 /* HomeView.swift */,
 				706AC79C2B0B296000E2CF81 /* BingoView.swift */,
+				1A3FF4712B2DA3C80045748E /* CountdownTimerView.swift */,
 				D9A9C64D2B142A5C00AA89BA /* Challenges.swift */,
-				70F2A9CF2B108138008E4A0F /* StructFile.swift */,
-				DFFA5F752B0DE2C20078B86F /* timer.swift */,
-				702F825D2B0C3823007DF713 /* CalculatorView.swift */,
-				702F825F2B0C385E007DF713 /* ActualCalculatorView.swift */,
-				450ECD9D2B0C90F400465E94 /* tipOfTheDayView.swift */,
-				706AC79E2B0B423F00E2CF81 /* CarbonFootprintView.swift */,
-				DFFA5F6F2B0D944C0078B86F /* CarbonFootprintResultView.swift */,
+				1A3FF46F2B2D8DFE0045748E /* FootprintDetailView.swift */,
+				702F825D2B0C3823007DF713 /* FootprintListView.swift */,
+				702F825F2B0C385E007DF713 /* CreateFootprintView.swift */,
 				DFFA5F712B0D94640078B86F /* CustomButtonStyle.swift */,
 				D9F51DCC2B0B06CC00BEBB4E /* Assets.xcassets */,
 				DF1210EB2B197D7E00F5DA29 /* iTunesArtwork@2x.png */,
@@ -115,6 +108,7 @@
 			children = (
 				DF67BC592B0C8E1400FBC0C2 /* FootprintManager.swift */,
 				DF67BC5B2B0C8E4400FBC0C2 /* Footprint.swift */,
+				70F2A9CF2B108138008E4A0F /* Challenge.swift */,
 			);
 			path = "Data Model";
 			sourceTree = "<group>";
@@ -196,17 +190,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				702F82602B0C385E007DF713 /* ActualCalculatorView.swift in Sources */,
+				702F82602B0C385E007DF713 /* CreateFootprintView.swift in Sources */,
+				1A3FF4722B2DA3C80045748E /* CountdownTimerView.swift in Sources */,
 				D9A9C64E2B142A5C00AA89BA /* Challenges.swift in Sources */,
-				706AC79F2B0B423F00E2CF81 /* CarbonFootprintView.swift in Sources */,
-				70F2A9D02B108138008E4A0F /* StructFile.swift in Sources */,
-				DFFA5F762B0DE2C20078B86F /* timer.swift in Sources */,
-				450ECD9E2B0C90F400465E94 /* tipOfTheDayView.swift in Sources */,
+				70F2A9D02B108138008E4A0F /* Challenge.swift in Sources */,
 				706AC7932B0B096F00E2CF81 /* HomeView.swift in Sources */,
-				DFFA5F702B0D944C0078B86F /* CarbonFootprintResultView.swift in Sources */,
 				706AC79D2B0B296000E2CF81 /* BingoView.swift in Sources */,
 				DFFA5F722B0D94640078B86F /* CustomButtonStyle.swift in Sources */,
-				702F825E2B0C3823007DF713 /* CalculatorView.swift in Sources */,
+				702F825E2B0C3823007DF713 /* FootprintListView.swift in Sources */,
+				1A3FF4702B2D8DFE0045748E /* FootprintDetailView.swift in Sources */,
 				D9F51DCB2B0B06C900BEBB4E /* ContentView.swift in Sources */,
 				DF67BC5A2B0C8E1400FBC0C2 /* FootprintManager.swift in Sources */,
 				D9F51DC92B0B06C800BEBB4E /* eco_friendly_appApp.swift in Sources */,

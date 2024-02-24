@@ -39,13 +39,13 @@ struct CarbonFootprintView: View {
                         showResultView = true
                     }
                     .buttonStyle(CustomButtonStyle())
-                    NavigationLink(
-                        destination: CarbonFootprintResultView(totalCarbonFootprint: totalCarbonFootprint, airCarbonFootprint: airCarbonFootprint, utilities: utilities, selectedDate: selecteddate, title: tittle),
-                        isActive: $showResultView
-                    ) {
-                        EmptyView()
-                    }
-                    .hidden()
+//                    NavigationLink(
+//                        destination: CarbonFootprintResultView(totalCarbonFootprint: totalCarbonFootprint, airCarbonFootprint: airCarbonFootprint, utilities: utilities, selectedDate: selecteddate, title: tittle),
+//                        isActive: $showResultView
+//                    ) {
+//                        EmptyView()
+//                    }
+//                    .hidden()
                 }
                 .navigationBarTitle("Calculator")
             }

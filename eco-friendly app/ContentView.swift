@@ -19,7 +19,7 @@ struct ContentView: View {
                 .tabItem {
                     Label("Bingo", systemImage: "tablecells")
                 }
-            CalculatorView()
+            FootprintListView()
                 .tabItem {
                     Label("Calculator", systemImage: "123.rectangle.fill")
                 }
